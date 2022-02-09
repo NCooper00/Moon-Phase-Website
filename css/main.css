@@ -1,10 +1,38 @@
+::-webkit-scrollbar {
+    width: 1em;
+    height: 1rem;
+}
 
+::-webkit-scrollbar-track {
+    background: rgba(49, 89, 112, 0.21);
+    backdrop-filter: blur(1rem);
+    /* border: 2px solid var(--softwhite); */
+    /* margin-top: 125px; */
+    margin-right: 50px;
+    /* border-radius: 100vh; */
+}
+
+::-webkit-scrollbar-track:hover {
+    box-shadow: inset 0px 0px 10px #909090;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 2px solid #909090;
+    /* border-radius: 100vh; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0px 0px 5px var(--blueGlow);
+    cursor: pointer;
+}
 
 body {
     /* width: 100vw; */
     height: 100vh;
     background: #0f0f0f;
-    background-image: url('/photos/starry-night-2.jpg');
+    background-image: url('../photos/starry-night-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
