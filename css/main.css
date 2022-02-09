@@ -1,0 +1,77 @@
+
+
+body {
+    background: #0f0f0f;
+    background-image: url(/photos/starry-night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.navbar {
+    position: fixed;
+    width: 100vw;
+    height: max(100px, 12vh);
+    background: hsl(0 0% 100% / 0.05);
+    backdrop-filter: blur(1rem);
+    display: flex;
+    /* opacity: 80%; */
+    /* border-radius: 0px 0px 1vh 1vh; */
+}
+
+.navbarHolder {
+    max-width: 100%;
+    display: flex;
+}
+
+.moonPhaseHolder {
+    position: absolute;
+    left:  15em;
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+    justify-self: left;
+}
+
+.moonPhase {
+    color: white;
+    font-size: 4em;
+}
+
+.navLinks {
+    position: absolute;
+    right: 15em;
+    width: fit-content;
+    height: fit-content;
+    grid-row: 1;
+    margin-bottom: 5px;
+    align-self: flex-end;
+    justify-self: right;
+}
+
+.headerA {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0px 1.5em;
+}
+
+.moonPhases {
+    align-self: center;
+}
+
+.moonHolder {
+    display: grid;
+    align-self: center;
+}
+
+.moon {
+    position: relative;
+    aspect-ratio: 1;
+    width: 100px;
+    border-radius: 50%;
+    background: gray;
+    grid-row: 1;
+}

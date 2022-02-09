@@ -1,0 +1,25 @@
+{
+  "name": "moon-phase-website",
+  "version": "1.0.0",
+  "description": "Moon phase",
+  "main": "main.js",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "requirejs": "^2.3.6",
+    "three": "^0.124.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NCooper00/Moon-Phase-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NCooper00/Moon-Phase-Website/issues"
+  },
+  "homepage": "https://github.com/NCooper00/Moon-Phase-Website#readme"
+}
