@@ -32,7 +32,7 @@ body {
     /* width: 100vw; */
     height: 100vh;
     background: #0f0f0f;
-    background-image: url('../photos/starry-night-2.jpg');
+    background-image: url('/starry-night-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
