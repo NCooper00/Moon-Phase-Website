@@ -15,7 +15,9 @@ function getMoonData() {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    console.log(data[0].Phase)
+                    // console.log(data[0].Age)
+
+                    ageDegree(data[0].Age);
                     
                     moonPhaseEl.textContent = "Current Moon Phase: " + data[0].Phase;
 
@@ -64,6 +66,15 @@ function getMoonData() {
         });
 };
 getMoonData();
+
+function ageDegree(age) {
+    var x = 360 * age;
+    var y = 29.5;
+
+    const moonDegree = x/y;
+
+    document.querySelector('.moonWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
+}
 
 
 (function () {
