@@ -15,6 +15,7 @@ function getMoonData() {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
+                    console.log(data[0].Phase)
                     
                     moonPhaseEl.textContent = "Current Moon Phase: " + data[0].Phase;
 
@@ -33,7 +34,7 @@ function getMoonData() {
 
                     } else if (data[0].Phase === "Waxing Gibbous") {
                 
-                        moon[0].children[1].children[6].children[6].outerHTML = `<feColorMatrix id="moonFour" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                        moon[0].children[1].children[7].children[6].outerHTML = `<feColorMatrix id="moonSix" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
                     } else if (data[0].Phase === "1st Quarter") {
                 
@@ -41,7 +42,7 @@ function getMoonData() {
 
                     } else if (data[0].Phase === "Waxing Crescent") {
                 
-                        moon[0].children[1].children[7].children[6].outerHTML = `<feColorMatrix id="moonSix" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                        moon[0].children[1].children[6].children[6].outerHTML = `<feColorMatrix id="moonFour" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
                     } else if (data[0].Phase === "New Moon") {
                 

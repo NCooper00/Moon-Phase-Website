@@ -47,6 +47,7 @@ body {
     background: hsl(0 0% 100% / 0.05);
     backdrop-filter: blur(1rem);
     display: flex;
+    z-index: 9999;
     /* opacity: 80%; */
     /* border-radius: 0px 0px 1vh 1vh; */
 }
@@ -110,6 +111,28 @@ body {
     color: white;
 }
 
+.moonWheel {
+    position: absolute;
+    width: 25px;
+    height: 450px;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform: rotate(270deg);
+}
+
+.outerMoon {
+    flex: none;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    transition-delay: 100ms;
+}
+
 .moonStats {
     width: max(10vw, 100px);
     aspect-ratio: 1;
@@ -118,19 +141,22 @@ body {
     position: absolute;
     justify-self: center;
     align-self: center;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     animation: moonStatus 3s;
+    line-height: 1;
+    user-select: none;
+    transition: width 500ms ease-in-out;
     /* animation-delay: 2.4s; */
 }
 
 .moonStatus {
-    width: 80%;
-    max-height: 80%;
+    width: min-content;
+    max-height: min-content;
     vertical-align: middle;
 }
 
@@ -140,11 +166,52 @@ body {
     100% {opacity: 100;}
 }
 
+.moonSVG {
+    width: fit-content;
+    aspect-ratio: 1;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: box-shadow 500ms ease-in-out;
+    /* background-color: red; */
+}
+
+.moonSVG:hover {
+    box-shadow: inset 0px 0px 0px 90px black;
+}
+
+.moonSVG:hover .moonStats {
+    width: max(8vw, 80px);
+}
+
+.moonSVG:hover .moonPhases {
+    padding: 75px;
+}
+
+.moonSVG:hover .outerMoon {
+    opacity: 100;
+}
+
 .moonPhases {
+    max-width: 500px;
+    aspect-ratio: 1;
     border: 15px solid black;
     border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px ;
     animation: moonphases 2.5s;
+    transition: padding 500ms ease-in-out;
+    /* z-index: 3; */
 }
+
+/* .moonPhases:hover {
+    padding: 75px;
+} */
+
+/* .moonPhases:hover .outerMoon {
+    opacity: 100;
+} */
 
 @keyframes moonphases {
     0% {transform:rotate(0deg);
