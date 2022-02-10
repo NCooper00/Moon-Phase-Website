@@ -198,6 +198,21 @@ body {
     scroll-snap-align: start;
 }
 
+.pageCloud {
+    /* width: 100%; */
+    /* aspect-ratio: 100 / 10; */
+    position: absolute;
+    left: -29%;
+    /* top: 100%; */
+}
+
+#path70726 {
+    width: 100%;
+    /* aspect-ratio: 100 / 10; */
+    position: absolute;
+    top: 100%;
+}
+
 .page2 {
     flex-direction: column;
 }
