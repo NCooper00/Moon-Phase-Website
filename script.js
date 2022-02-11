@@ -109,21 +109,25 @@ function ageDegree(age) {
 
 const optionMenu = document.querySelector('.optionMenu');
 const options = document.querySelector('.options');
+const body = document.querySelector('body');
 
 options.addEventListener("click", () => {
     const menuStatus = optionMenu.getAttribute('aria-expanded');
     const optionStatus = options.getAttribute('aria-expanded');
+    const bodyStatus = body.getAttribute('aria-expanded');
+
     if (menuStatus === "false") {
         optionMenu.setAttribute('aria-expanded', true)
     } else {
         optionMenu.setAttribute('aria-expanded', false)
     };
-
     if (optionStatus === "true") {
         options.setAttribute('aria-expanded', false)
+        body.setAttribute('aria-expanded', true)
     } else {
         options.setAttribute('aria-expanded', true)
     }
+
 });
 
 const hamburger = document.querySelector('#check');
