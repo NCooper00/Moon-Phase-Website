@@ -54,132 +54,149 @@ body {
     font-family: 'Share Tech Mono', monospace;
 }
 
-.wonkeySVG {
+.wonkeySurround {
     position: absolute;
-    z-index: -500;
+    z-index: -50;
     width: 100px;
     aspect-ratio: 1;
     animation: wonkeySVG 800s infinite;
-    overflow: hidden;
+    /* overflow: hidden; */
+    cursor: pointer;
+}
+
+.wonkeySVG:hover {
+
 }
 
 @keyframes wonkeySVG {
     0% {
-        top: 100vh;
-        left: 0;
+        top: 90vh;
+        left: 10vw;
     }
     16.5% {
         top: 25vh;
-        left: 100vw;
+        left: 76vw;
+        width: 80px;
     }
     30% {
-        top: 0;
+        top: 10vh;
         left: 50vw;
+        width: 50px;
     }
     40.5% {
         top: 25vh;
-        left: 0;
+        left: 10vw;
     }
     55% {
-        top: 100vh;
+        top: 90vh;
         left: 65vw;
+        width: 125px;
     }
     66.5% {
         top: 50vh;
-        left: 100vw;
+        left: 76vw;
+        width: 135px;
     }
     85% {
-        top: 0;
+        top: 20vh;
         left: 25vw;
+        width: 125px;
     }
     100% {
-        top: 100%;
-        left: 0;
+        top: 90vh;
+        left: 10vw;
+        width: 100px;
     }
 }
 
 .navbar {
-    position: fixed;
+    position: absolute;
     width: 100vw;
-    height: min(120px, 18vh);
+    height: 120px;
     background: hsl(0 0% 100% / 0.05);
     backdrop-filter: blur(1rem);
-    display: flex;
+    display: inline-block;
     z-index: 9999;
+    
     /* opacity: 80%; */
     /* border-radius: 0px 0px 1vh 1vh; */
 }
 
-.navbarHolder {
+/* .navbarHolder {
     max-width: 100%;
     display: flex;
-}
+} */
 
-.mainLogo {
+/* .mainLogo {
     width: 65px;
     aspect-ratio: 1;
-    /* position: absolute; */
+    position: absolute;
     top: 5%;
     left: 1%;
     border-radius: 50%;
     margin-right: 15px;
-}
+} */
 
-.moonPhaseHolder {
+/* .moonPhaseHolder {
     position: absolute;
     left:  8%;
     width: fit-content;
     bottom: 5%;
     height: fit-content;
     display: flex;
-    /* align-self: flex-end; */
-    /* justify-self: left; */
-}
+    align-self: flex-end;
+    justify-self: left;
+} */
 
 .moonPhase {
     color: white;
-    font-size: min(4em, 16vw);
+    font-size: 4em;
     cursor: pointer;
     user-select: none;
+    line-height: 120px;
+    font-weight: 600;
+    padding: 0 100px;
+    /* width: max-content; */
 }
 
 .navLinks {
-    position: absolute;
-    /* right: 15em; */
-    width: fit-content;
-    height: fit-content;
-    right: 10%;
-    bottom: 5%;
-    grid-row: 1;
-    column-gap: 10px;
-    text-align: right;
-    margin-bottom: 5px;
-    display: grid;
-    gap: 15%;
-    /* align-self: flex-end; */
-    /* justify-self: right; */
-    justify-content: flex-end;
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 15px;
+    /* position: absolute; */
 }
 
 .headerA {
     color: white;
-    font-size: min(2em, 7vw);
+    font-size: 2em;
     text-decoration: none;
-    grid-row: 1;
-    width: fit-content;
-    /* padding: 0px 1.5em; */
     /* position: absolute; */
-    /* padding-right: 15px; */
-    
 }
 
-/* .home {
-    right: 15%;
+.checkBtn {
+    font-size: 3em;
+    color: white;
+    float: right;
+    line-height: 120px;
+    margin-right: 60px;
+    cursor: pointer;
+    display: none;
 }
 
-.options {
-    right: 5%;
-} */
+.hamMenu {
+    width: 30px; 
+    aspect-ratio: 1; 
+    color: white;
+}
+
+#check {
+    display: none;
+}
 
 .bodyydob {
     width: 100vw;
@@ -206,13 +223,6 @@ body {
     /* top: 100%; */
 }
 
-#path70726 {
-    width: 100%;
-    /* aspect-ratio: 100 / 10; */
-    position: absolute;
-    top: 100%;
-}
-
 .page2 {
     flex-direction: column;
 }
@@ -220,7 +230,7 @@ body {
 .moonWheel {
     position: absolute;
     width: 25px;
-    height: 555px;
+    height: 100%;
     /* background-color: red; */
     display: flex;
     align-items: flex-start;
@@ -236,6 +246,7 @@ body {
     border-radius: 50%;
     background: white;
     opacity: 0;
+    margin-top: 55%;
     transition: opacity 500ms ease-in-out;
     transition-delay: 100ms;
 }
@@ -276,7 +287,7 @@ body {
 
 .moonSVG {
     position: relative;
-    top: 10%;
+    top: 5%;
     width: min-content;
     aspect-ratio: 1;
     z-index: 9;
@@ -365,152 +376,124 @@ body {
     flex-wrap: wrap;
 }
 
+.waveLayers {
+    position: absolute;
+    opacity: 30%;
+}
 
 
 
 
-@media screen and (max-width: 800px) {
-    .navbar {
-        position: fixed;
-        width: 100vw;
-        height: min(120px, 18vh);
-        background: hsl(0 0% 100% / 0.05);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-        /* opacity: 80%; */
-        /* border-radius: 0px 0px 1vh 1vh; */
-    }
-    .moonPhaseHolder {
-        position: absolute;
-        left:  5%;
-        width: fit-content;
-        bottom: 5%;
-        height: fit-content;
-        /* align-self: flex-end; */
-        /* justify-self: left; */
-    }
-    .navLinks {
-        position: absolute;
-        /* right: 15em; */
-        width: 100%;
-        height: fit-content;
-        right: 5%;
-        bottom: 5%;
-        grid-row: 1;
-        /* column-gap: 10px; */
-        text-align: right;
-        margin-bottom: 5px;
-        display: grid;
-        gap: 5%;
-        /* align-self: flex-end; */
-        /* justify-self: right; */
-        justify-content: flex-end;
+@media screen and (max-width: 1000px) {
+    .moonPhase {
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        user-select: none;
+        line-height: 120px;
+        font-weight: 600;
+        padding: 0 50px;
+        /* flex: none; */
+        /* width: max-content; */
     }
     .headerA {
         color: white;
-        font-size: min(1.5em, 5vw);
+        font-size: 1.75em;
         text-decoration: none;
-        grid-row: 1;
-        width: fit-content;
-        /* padding: 0px 1.5em; */
         /* position: absolute; */
-        /* padding-right: 15px; */
-        
+    }
+    .checkBtn {
+        font-size: 3em;
+        color: white;
+        float: right;
+        line-height: 120px;
+        margin-right: 60px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .hamMenu {
+        width: 30px; 
+        aspect-ratio: 1; 
+        color: white;
+    }
+    
+    #check {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .moonPhase {
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        user-select: none;
+        line-height: 120px;
+        font-weight: 600;
+        padding: 0 50px;
+        /* flex: none; */
+        /* width: max-content; */
+    }
+    .checkBtn {
+        font-size: 3em;
+        color: white;
+        float: right;
+        line-height: 120px;
+        margin-right: 60px;
+        cursor: pointer;
+        display: block;
+    }
+    
+    .hamMenu {
+        width: 30px; 
+        aspect-ratio: 1; 
+        color: white;
+    }
+    
+    #check {
+        display: none;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 300%;
+        background: hsl(0 0% 0% / .85);
+        backdrop-filter: blur(1rem);
+        top: 120px;
+        left: -100%;
+        text-align: center;
+        transition: all 500ms;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav ul li a {
+        font-size: 2em;
+    }
+    a:hover, a:active {
+        background: none;
+        color: #3a80b9;
+    }
+    #check:checked ~ ul {
+        left: 0;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .navbar {
-        position: fixed;
-        width: 100vw;
-        height: min(130px, 20vh);
-        background: hsl(0 0% 100% / 0.05);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-        /* opacity: 80%; */
-        /* border-radius: 0px 0px 1vh 1vh; */
-    }
-    .moonPhaseHolder {
-        position: absolute;
-        left:  12vw;
-        width: fit-content;
-        top: 8%;
-        height: fit-content;
-        /* align-self: flex-end; */
-        /* justify-self: left; */
-    }
-    .navLinks {
-        position: absolute;
-        /* right: 15em; */
-        width: 100%;
-        height: fit-content;
-        right: 25%;
-        bottom: 5%;
-        grid-row: 1;
-        /* column-gap: 10px; */
-        text-align: right;
-        margin-bottom: 5px;
-        display: grid;
-        gap: 5%;
-        /* align-self: flex-end; */
-        /* justify-self: right; */
-        justify-content: flex-end;
-    }
-    .headerA {
+    .moonPhase {
         color: white;
-        font-size: min(2em, 7vw);
-        text-decoration: none;
-        grid-row: 1;
-        width: fit-content;
-        /* padding: 0px 1.5em; */
-        /* position: absolute; */
-        /* padding-right: 15px; */
-        
+        font-size: 2.5em;
+        cursor: pointer;
+        user-select: none;
+        line-height: 120px;
+        font-weight: 600;
+        padding: 0 25px;
+        /* flex: none; */
+        /* width: max-content; */
     }
 }
 
 @media screen and (max-width: 300px) {
-    .navbar {
-        position: fixed;
-        width: 100vw;
-        height: min(100px, 20vh);
-        background: hsl(0 0% 100% / 0.05);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        z-index: 9999;
-        /* opacity: 80%; */
-        /* border-radius: 0px 0px 1vh 1vh; */
-    }
-    .moonPhaseHolder {
-        position: absolute;
-        left:  8%;
-        width: fit-content;
-        bottom: 35%;
-        height: fit-content;
-        /* align-self: flex-end; */
-        /* justify-self: left; */
-    }
-    .navLinks {
-        position: absolute;
-        /* right: 15em; */
-        width: 100%;
-        height: fit-content;
-        /* right: 10%; */
-        right: 25%;
-        bottom: 5%;
-        grid-row: 1;
-        column-gap: 10px;
-        text-align: center;
-        /* margin-bottom: 5px; */
-        display: grid;
-        gap: 5%;
-        /* align-self: flex-end; */
-        /* justify-self: right; */
-    }
+    
 }
