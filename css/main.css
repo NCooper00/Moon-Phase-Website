@@ -251,6 +251,32 @@ a:hover, a:active {
     margin-right: 20%;
 }
 
+.discIcon {
+    background-image: url("/icons/discord.png");
+}
+
+.gitIcon {
+    background-image: url("/icons/github.png");
+}
+
+.contIcon {
+    background-image: url("/icons/email.png");
+}
+
+.discIcon, .gitIcon, .contIcon {
+    cursor: pointer;
+    margin-top: 12px;
+    position: fixed;
+    width: 20px;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 2.5em;
+    margin-left: 20%;
+    font-size: 1.1em;
+    grid-row: 1;
+}
+
 .optionBtn {
     color: rgb(214, 214, 214);
     font-size: 1.1em;
@@ -482,6 +508,9 @@ a:hover, a:active {
 }
 
 @media screen and (max-width: 1000px) {
+    .discIcon, .gitIcon, .contIcon {
+        display: none;
+    }
     .moonPhase {
         color: white;
         font-size: 3em;
