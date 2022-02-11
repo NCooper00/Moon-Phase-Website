@@ -252,15 +252,15 @@ a:hover, a:active {
 }
 
 .discIcon {
-    background-image: url("/icons/discord.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/discord.png");
 }
 
 .gitIcon {
-    background-image: url("/icons/github.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/github.png");
 }
 
 .contIcon {
-    background-image: url("/icons/email.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/email.png");
 }
 
 .discIcon, .gitIcon, .contIcon {
