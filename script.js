@@ -83,7 +83,19 @@ function ageDegree(age) {
         speed = 0.7;
 
     window.onscroll = function () {
+
         [].slice.call(parallax).forEach(function (el, i) {
+            const home = document.querySelector('.home');
+            const merch = document.querySelector('.merch');
+            if ((window.innerHeight - window.pageYOffset) >= document.body.offsetHeight - 25) {
+                console.log("top");
+                home.setAttribute('aria-expanded', true);
+            } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 600) {
+                merch.setAttribute('aria-expanded', true);
+            } else {
+                home.setAttribute('aria-expanded', false);
+                merch.setAttribute('aria-expanded', false);
+            }
 
             var windowYOffset = window.pageYOffset,
                 elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
@@ -95,3 +107,33 @@ function ageDegree(age) {
 })();
 
 
+const optionMenu = document.querySelector('.optionMenu');
+const options = document.querySelector('.options');
+
+options.addEventListener("click", () => {
+    const menuStatus = optionMenu.getAttribute('aria-expanded');
+    const optionStatus = options.getAttribute('aria-expanded');
+    if (menuStatus === "false") {
+        optionMenu.setAttribute('aria-expanded', true)
+    } else {
+        optionMenu.setAttribute('aria-expanded', false)
+    };
+
+    if (optionStatus === "true") {
+        options.setAttribute('aria-expanded', false)
+    } else {
+        options.setAttribute('aria-expanded', true)
+    }
+});
+
+const hamburger = document.querySelector('#check');
+
+hamburger.addEventListener('click', () => {
+    const hamStatus = hamburger.getAttribute('aria-expanded');
+    if (hamStatus === "false") {
+        optionMenu.setAttribute('aria-expanded', false);
+        options.setAttribute('aria-expanded', false);
+    }
+});
+
+    

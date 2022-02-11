@@ -122,18 +122,25 @@
 <body>
 
     <nav class="navbar">
-        <input type="checkbox" id="check">
+        <input type="checkbox" id="check" aria-expanded="false">
         <label for="check" class="checkBtn ">
             <img class="hamMenu" src="icons/menu-white.png" alt="menu icon">
         </label>
         <label class="moonPhase" style="text-decoration: none;">Moon Phase</label>
         <ul class="navLinks">
-            <li><a href="#page1" class="headerA home" style="text-decoration: none;">Home</a></li>
-            <li><a href="#page2" class="headerA options" style="text-decoration: none;">Merch</a></li>
-            <li><a href="" class="headerA options" style="text-decoration: none;">Options</a></li>
-        </ul>
-    </nav>
-    
+            <li class="mainNavLi"><a aria-expanded="false" href="#page1" class="headerA home" style="text-decoration: none;">Home</a></li>
+            <li class="mainNavLi"><a aria-expanded="false" href="#page2" class="headerA merch" style="text-decoration: none;">Merch</a></li>
+            <li class="mainNavLi"><a aria-expanded="false" class="headerA options" style="text-decoration: none;">Options</li>
+    </ul>
+</nav>
+<div class="optionMenu" aria-expanded="false">
+    <ul class="optionLinks">
+        <li class="optionLi discord"><a style="text-decoration: none;" href="" class="optionBtn">Discord</a></li>
+        <li class="optionLi github"><a style="text-decoration: none;" href="" class="optionBtn">Github</a></li>
+        <li class="optionLi contact"><a style="text-decoration: none;" href="" class="optionBtn">Contact</a></li>
+    </ul>
+</div> 
+
     <div class="bodyydob">
     <!-- <div class="frame1">
         <div class="ellipse1">

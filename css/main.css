@@ -59,7 +59,7 @@ body {
     z-index: -50;
     width: 100px;
     aspect-ratio: 1;
-    animation: wonkeySVG 800s infinite;
+    animation: wonkeySVG 600s infinite;
     /* overflow: hidden; */
     cursor: pointer;
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .navbar {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 120px;
     background: hsl(0 0% 100% / 0.05);
@@ -151,7 +151,6 @@ body {
 .moonPhase {
     color: white;
     font-size: 4em;
-    cursor: pointer;
     user-select: none;
     line-height: 120px;
     font-weight: 600;
@@ -164,11 +163,12 @@ body {
     margin-right: 50px;
 }
 
-nav ul li {
+.mainNavLi {
     display: inline-block;
     line-height: 120px;
     margin: 0 15px;
     /* position: absolute; */
+    user-select: none;
 }
 
 .headerA {
@@ -176,6 +176,29 @@ nav ul li {
     font-size: 2em;
     text-decoration: none;
     /* position: absolute; */
+    transition: all 250ms;
+    cursor: pointer;
+    user-select: none;
+}
+
+a:hover, a:active {
+    border: 2px white;
+    border-style: none none solid none;
+}
+
+.home[aria-expanded="true"] {
+    border: 2px white;
+    border-style: none none solid none;
+}
+
+.merch[aria-expanded="true"] {
+    border: 2px white;
+    border-style: none none solid none;
+}
+
+.options[aria-expanded="true"] {
+    border: 2px white;
+    border-style: none none solid none;
 }
 
 .checkBtn {
@@ -188,6 +211,12 @@ nav ul li {
     display: none;
 }
 
+.optionCheckBtn {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
 .hamMenu {
     width: 30px; 
     aspect-ratio: 1; 
@@ -196,6 +225,35 @@ nav ul li {
 
 #check {
     display: none;
+}
+
+.optionMenu[aria-expanded="true"] {
+    right: 0;
+}
+
+.optionMenu {
+    position: fixed;
+    /* float: right; */
+    width: 200px;
+    
+    top: 120px;
+    right: -100%;
+    /* display: inline-block; */
+    padding: 20px 0px 10px 0px;
+    text-align: right;
+    background: hsl(0 0% 100% / 0.05);
+    backdrop-filter: blur(2px);
+    transition: all 500ms ease;
+}
+
+.optionLi {
+    line-height: 2.5em;
+    margin-right: 20%;
+}
+
+.optionBtn {
+    color: rgb(214, 214, 214);
+    font-size: 1.1em;
 }
 
 .bodyydob {
@@ -454,7 +512,7 @@ nav ul li {
     #check {
         display: none;
     }
-    ul {
+    .navLinks {
         position: fixed;
         width: 100%;
         height: 300%;
@@ -465,10 +523,11 @@ nav ul li {
         text-align: center;
         transition: all 500ms;
     }
-    nav ul li {
+    .mainNavLi {
         display: block;
+        line-height: 100px;
     }
-    nav ul li a {
+    .headerA {
         font-size: 2em;
     }
     a:hover, a:active {
@@ -477,6 +536,61 @@ nav ul li {
     }
     #check:checked ~ ul {
         left: 0;
+    }
+    .optionMenu[aria-expanded="true"] {
+        position: fixed;
+        /* left: 32.5%; */
+        /* display: inline-block; */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .optionMenu {
+        position: fixed;
+        /* float: center; */
+        width: 100%;
+        height: fit-content;
+        /* flex-wrap: wrap; */
+        
+        top: 420px;
+        right: -100%;
+        /* display: inline-block; */
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+        background: hsl(0 0% 0% / .5);
+        backdrop-filter: none;
+        transition: all 500ms ease;
+        z-index: 9999;
+    }
+
+    /* .optionLinks {
+
+    } */
+    
+    .optionLi {
+        line-height: 2em;
+        margin-right: 0%;
+        display: inline-block;
+        padding: 0 5px;
+    }
+    
+    .optionBtn {
+        color: rgb(214, 214, 214);
+        font-size: 1.1em;
+    }
+    .github {
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        padding: 0 8px;
+    }
+    .discord:active {
+        border-bottom: 2px solid white;
+    }
+    .github:active {
+        border-bottom: 2px solid white;
+    }
+    .contact:active {
+        border-bottom: 2px solid white;
     }
 }
 
