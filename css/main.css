@@ -537,12 +537,16 @@ a:hover, a:active {
     #check:checked ~ ul {
         left: 0;
     }
+    body[aria-expanded="false"] .optionMenu {
+        top: 420px;
+    }
     .optionMenu[aria-expanded="true"] {
         position: fixed;
         /* left: 32.5%; */
         /* display: inline-block; */
         align-items: center;
         justify-content: center;
+        right: 0;
     }
     
     .optionMenu {
