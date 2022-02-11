@@ -336,7 +336,7 @@ a:hover, a:active {
 }
 
 .moonStats {
-    width: max(10vw, 135px);
+    width: 30%;
     aspect-ratio: 1;
     background-color: black;
     border-radius: 50%;
@@ -388,7 +388,7 @@ a:hover, a:active {
 }
 
 .moonSVG:hover .moonStats {
-    width: max(8vw, 80px);
+    width: 35%;
 }
 
 .moonSVG:hover .moonPhases {
@@ -643,6 +643,66 @@ a:hover, a:active {
         padding: 0 25px;
         /* flex: none; */
         /* width: max-content; */
+    }
+    .outerMoon {
+        width: 35px;
+    }
+    .moonStats {
+        width: 35%;
+        aspect-ratio: 1;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        /* justify-self: center; */
+        /* align-self: center; */
+        font-size: 1.2em;
+        line-height: 1;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: moonStatus 3s;
+        user-select: none;
+        transition: width 500ms ease-in-out;
+        z-index: 2;
+        /* animation-delay: 2.4s; */
+    }
+    .moonStatus {
+        width: fit-content;
+        max-height: fit-content;
+        border-radius: 50%;
+        /* vertical-align: middle; */
+    }
+    .moonSVG:hover .moonStats {
+        width: 30%;
+    }
+    .moonSVG:hover .moonPhases {
+        padding: 55px;
+        box-shadow: 0px 0px 20px 10px white;
+    }
+    .checkBtn {
+        font-size: 3em;
+        color: white;
+        float: right;
+        line-height: 120px;
+        margin-right: 25px;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .moonStats {
+        font-size: 1em;
+    }
+    .moonSVG:hover .moonPhases {
+        padding: 25px;
+        box-shadow: 0px 0px 20px 10px white;
+    }
+    .outerMoon {
+        width: 25px;
+        margin-top: 8px;
     }
 }
 
