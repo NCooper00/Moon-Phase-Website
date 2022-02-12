@@ -140,4 +140,48 @@ hamburger.addEventListener('click', () => {
     }
 });
 
-    
+const music = document.querySelector('.musicBtn');
+const musicIcon = document.querySelector('.musicIcon');
+const musicBox = document.querySelector('.musicBox');
+
+music.addEventListener('click', () => {
+    const musicStatus = music.getAttribute('aria-expanded');
+    if (musicStatus === "false") {
+        music.setAttribute('aria-expanded', true);
+        musicIcon.setAttribute('aria-expanded', true);
+        musicBox.setAttribute('aria-expanded', true);
+    } else {
+        music.setAttribute('aria-expanded', false);
+        musicIcon.setAttribute('aria-expanded', false);
+        musicBox.setAttribute('aria-expanded', false);
+    }
+});
+
+musicIcon.addEventListener('click', () => {
+    const musicStatus = musicIcon.getAttribute('aria-expanded');
+    if (musicStatus === "false") {
+        music.setAttribute('aria-expanded', true);
+        musicIcon.setAttribute('aria-expanded', true);
+        musicBox.setAttribute('aria-expanded', true);
+    } else {
+        music.setAttribute('aria-expanded', false);
+        musicIcon.setAttribute('aria-expanded', false);
+        musicBox.setAttribute('aria-expanded', false);
+    }
+});
+
+var currentMusic;
+const playBtn = document.querySelector('.playBtn');
+
+playBtn.addEventListener('click', () => {
+    const visibility = playBtn.getAttribute('data-visible');
+    if (visibility === "true") {
+        playBtn.setAttribute('data-visible', false)
+        currentMusic.pause();
+    } else {
+        playBtn.setAttribute('data-visible', true)
+        currentMusic = new Audio("/music-lib/spacey/Alley-Cat-Geographer.mp3");
+        currentMusic.muted = false;
+        currentMusic.play();
+    }
+});
