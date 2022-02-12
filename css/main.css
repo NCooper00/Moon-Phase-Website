@@ -426,6 +426,15 @@ a:hover, a:active {
 
 }
 
+.playBtn[data-visible="true"] {
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/pause-btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
 .next {
     background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/next.png");
     background-size: cover;
