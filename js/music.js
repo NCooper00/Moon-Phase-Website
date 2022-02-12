@@ -4,7 +4,7 @@ const source = document.querySelectorAll('source');
 
 var audio = document.getElementById('player');
 
-const spacey = "/music-lib/";
+const spacey = "https://ncooper00.github.io/Moon-Phase-Website/music-lib/";
 const mp3 = ".mp3";
 
 const allMusic = [

@@ -436,7 +436,7 @@ a:hover, a:active {
 }
 
 .shuffle {
-    background-image: url("/icons/shuffle.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/shuffle.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
@@ -450,7 +450,7 @@ a:hover, a:active {
 }
 
 .shuffle[aria-enabled="true"] {
-    background-image: url("/icons/shuffle.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/shuffle.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
