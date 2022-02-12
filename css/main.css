@@ -279,7 +279,7 @@ a:hover, a:active {
 }
 
 .musicIcon {
-    background-image: url("/icons/headset-grey.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/headset-grey.png");
 }
 
 .discIcon, .gitIcon, .contIcon, .musicIcon {
@@ -328,7 +328,7 @@ a:hover, a:active {
 }
 
 .previous {
-    background-image: url("/icons/previous.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/previous.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
@@ -337,7 +337,7 @@ a:hover, a:active {
 }
 
 .playBtn {
-    background-image: url("/icons/play-btn.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/play-btn.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 35px;
@@ -346,7 +346,7 @@ a:hover, a:active {
 }
 
 .next {
-    background-image: url("/icons/next.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/next.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
