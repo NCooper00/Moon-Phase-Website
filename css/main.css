@@ -423,7 +423,7 @@ a:hover, a:active {
     width: 35px;
     aspect-ratio: 1;
     border-radius: 50%;
-
+    transition: background-image 100ms;
 }
 
 .playBtn[data-visible="true"] {
