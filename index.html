@@ -150,11 +150,14 @@
     </ul>
 </div> 
 
-<div aria-expanded="false" class="musicBox">
-
+<div aria-expanded="false" data-visible="false" class="musicBox">
+    <div class="currentSong">
+        <div class="song">Song name that is super long for testing purposes</div>
+    </div>
     <button class="previous"></button>
     <button data-visible="false" class="playBtn"></button>
     <button class="next"></button>
+    <button aria-enabled="false" class="shuffle"></button>
 
 </div>
 
@@ -366,5 +369,19 @@
     </div>
 </body>
 
+<audio controls id="player">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
+</audio>
+
 <script src="script.js"></script>
+<script src="js/music.js"></script>
 </html>
