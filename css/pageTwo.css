@@ -8,6 +8,7 @@
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
+    column-gap: 45%;
 }
 
 .page2Head {
@@ -15,7 +16,185 @@
     position: absolute;
     color: white;
     margin-top: 10%;
+    padding-bottom: 5px;
     margin-left: 5%;
+    border-bottom: 2px solid white;
+}
+
+.randomizeSolar {
+    position: absolute;
+    right: -20%;
+    top: 15%;
+    width: 50px;
+    aspect-ratio: 1;
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/icons/dice.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.randomizeSolar:hover {
+    width: 50px;
+    /* box-shadow: 0px 0px 5px white; */
+    animation: diceHover 6s infinite;
+}
+
+@keyframes diceHover {
+    0% {
+        transform: translateY(0px);
+    }
+    5% {
+        transform: translateY(3px);
+    }
+    10% {
+        transform: translateY(6px);
+        transform: rotate(5deg);
+    }
+    15% {
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    20% {
+        transform: translateY(6px);
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    30% {
+        transform: translateY(6px);
+        transform: rotate(5deg);
+    }
+    35% {
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-2px);
+        transform: rotate(0deg);
+    }
+    55% {
+        transform: translateY(6px);
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: translateY(6px);
+        transform: rotate(15deg);
+    }
+    65% {
+        transform: translateY(6px);
+        transform: rotate(-15deg);
+    }
+    70% {
+        transform: translateY(6px);
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: translateY(6px);
+        transform: rotate(-15deg);
+    }
+    80% {
+        transform: translateY(6px);
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: translateY(0px);
+        transform: rotate(0deg);
+    }
+
+}
+
+.randomizeSolar:active {
+    animation: diceHover 6s infinite;
+}
+
+.orderSolar {
+    position: absolute;
+    right: -40%;
+    top: 15%;
+    width: 50px;
+    aspect-ratio: 1;
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/icons/order.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.orderSolar:hover {
+    width: 50px;
+    /* box-shadow: 0px 0px 5px white; */
+    animation: diceHover 6s infinite;
+}
+
+@keyframes diceHover {
+    0% {
+        transform: translateY(0px);
+    }
+    5% {
+        transform: translateY(3px);
+    }
+    10% {
+        transform: translateY(6px);
+        transform: rotate(5deg);
+    }
+    15% {
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    20% {
+        transform: translateY(6px);
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    30% {
+        transform: translateY(6px);
+        transform: rotate(5deg);
+    }
+    35% {
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-2px);
+        transform: rotate(0deg);
+    }
+    55% {
+        transform: translateY(6px);
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: translateY(6px);
+        transform: rotate(15deg);
+    }
+    65% {
+        transform: translateY(6px);
+        transform: rotate(-15deg);
+    }
+    70% {
+        transform: translateY(6px);
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: translateY(6px);
+        transform: rotate(-15deg);
+    }
+    80% {
+        transform: translateY(6px);
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: translateY(0px);
+        transform: rotate(0deg);
+    }
+
+}
+
+.orderSolar:active {
+    animation: diceHover 6s infinite;
 }
 
 .planet {
@@ -23,10 +202,14 @@
 }
 
 .outerRing {
-    position: absolute;
+    /* position: absolute; */
+    /* grid-column: 2; */
+    margin-top: 18%; 
+    position: relative;
     aspect-ratio: 1;
     align-self: center;
     /* bottom: 15%; */
+    top: -12%;
     left: 50%;
     width: 40vw;
     /* background-color: black; */
@@ -35,13 +218,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid white;
+    border: 1px solid white;
+}
+
+.ring {
+    transition: transform 5s;
 }
 
 .innerRing1 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 32.5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -70,7 +257,7 @@
 .innerRing2 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 27.5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -99,7 +286,7 @@
 .innerRing3 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 22.5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -140,7 +327,7 @@
 .innerRing4 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 17.5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -181,7 +368,7 @@
 .innerRing5 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 12.5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -210,7 +397,7 @@
 .innerRing6 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 10vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -239,7 +426,7 @@
 .innerRing7 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 7.5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -268,7 +455,7 @@
 .innerRing8 {
     position: absolute;
     aspect-ratio: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 5vw;
     /* background-color: black; */
     border-radius: 50%;
@@ -299,9 +486,10 @@
     aspect-ratio: 1;
     /* border: 2px solid white; */
     width: 2vw;
-    background-color: #ffc0b2;
+    background-color: #ff932d;
     border-radius: 50%;
-    box-shadow: 0px 0px 100px #ffaba0;
+    box-shadow: 0px 0px 500px 20px #ffb62e,
+    0px 0px 20px rgb(255, 255, 255);
 }
 
 

@@ -83,23 +83,99 @@ function ageDegree(age) {
     var a = 360 * day;
     var b = 365;
 
-    const moonDegree = x/y;
-    const earthDegree = a/b;
+    var moonDegree = x/y;
+    var earthDegree = a/b;
  
-    const mercuryDegree = (earthDegree * 1.60738255033557) / 0.3870481927710843;
-    const venusDegree = Math.floor(Math.random() * 361) + (earthDegree * 1.174496644295302) / 0.7233218588640275;
-    const marsDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.8087248322147651) / 1.523235800344234;
-    const jupiterDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.4395973154362416) / 5.204388984509466; 
-    const saturnDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.325503355704698) / 9.582616179001721;
-    const uranusDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.2281879194630872) / 19.19104991394148;
-    const neptuneDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.1812080536912752) / 30.04518072289157;
-    const plutoDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.1567114093959732) / 39.80206540447504;
+    var mercuryDegree = (earthDegree * 1.60738255033557) / 0.3870481927710843;
+    var venusDegree = (earthDegree * 1.174496644295302) / 0.7233218588640275;
+    var marsDegree = (earthDegree * 0.8087248322147651) / 1.523235800344234;
+    var jupiterDegree = (earthDegree * 0.4395973154362416) / 5.204388984509466; 
+    var saturnDegree = (earthDegree * 0.325503355704698) / 9.582616179001721;
+    var uranusDegree = (earthDegree * 0.2281879194630872) / 19.19104991394148;
+    var neptuneDegree = (earthDegree * 0.1812080536912752) / 30.04518072289157;
+    var plutoDegree = (earthDegree * 0.1567114093959732) / 39.80206540447504;
+    const dice = document.querySelector('.randomizeSolar');
+
+    dice.addEventListener('click', () => {
+        var earthDegree = Math.floor(Math.random() * 361) + (a/b);
+        var mercuryDegree = Math.floor(Math.random() * 361) + (earthDegree * 1.60738255033557) / 0.3870481927710843;
+        var venusDegree = Math.floor(Math.random() * 361) + (earthDegree * 1.174496644295302) / 0.7233218588640275;
+        var marsDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.8087248322147651) / 1.523235800344234;
+        var jupiterDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.4395973154362416) / 5.204388984509466; 
+        var saturnDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.325503355704698) / 9.582616179001721;
+        var uranusDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.2281879194630872) / 19.19104991394148;
+        var neptuneDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.1812080536912752) / 30.04518072289157;
+        var plutoDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.1567114093959732) / 39.80206540447504;
+
+        document.querySelector('.earthRot').style.transition = 'transform 5s';
+        document.querySelector('.mercuryRot').style.transition = 'transform 5s';
+        document.querySelector('.venusRot').style.transition = 'transform 5s';
+        document.querySelector('.marsRot').style.transition = 'transform 5s';
+        document.querySelector('.jupiterRot').style.transition = 'transform 5s';
+        document.querySelector('.saturnRot').style.transition = 'transform 5s';
+        document.querySelector('.uranusRot').style.transition = 'transform 5s';
+        document.querySelector('.neptuneRot').style.transition = 'transform 5s';
+        document.querySelector('.plutoRot').style.transition = 'transform 5s';
+
+        document.querySelector('.earthRot').style.transform = 'rotate(' + earthDegree + 'deg)';
+        document.querySelector('.mercuryRot').style.transform = 'rotate(' + mercuryDegree + 'deg)';
+        document.querySelector('.venusRot').style.transform = 'rotate(' + venusDegree + 'deg)';
+        document.querySelector('.marsRot').style.transform = 'rotate(' + marsDegree + 'deg)';
+        document.querySelector('.jupiterRot').style.transform = 'rotate(' + jupiterDegree + 'deg)';
+        document.querySelector('.saturnRot').style.transform = 'rotate(' + saturnDegree + 'deg)';
+        document.querySelector('.uranusRot').style.transform = 'rotate(' + uranusDegree + 'deg)';
+        document.querySelector('.neptuneRot').style.transform = 'rotate(' + neptuneDegree + 'deg)';
+        document.querySelector('.plutoRot').style.transform = 'rotate(' + plutoDegree + 'deg)';
+    });
+
+    const order = document.querySelector('.orderSolar');
+    order.addEventListener('click', () => {
+        var earthDegree = a/b;
+        var mercuryDegree = (earthDegree * 1.60738255033557) / 0.3870481927710843;
+        var venusDegree = (earthDegree * 1.174496644295302) / 0.7233218588640275;
+        var marsDegree = (earthDegree * 0.8087248322147651) / 1.523235800344234;
+        var jupiterDegree = (earthDegree * 0.4395973154362416) / 5.204388984509466; 
+        var saturnDegree = (earthDegree * 0.325503355704698) / 9.582616179001721;
+        var uranusDegree = (earthDegree * 0.2281879194630872) / 19.19104991394148;
+        var neptuneDegree = (earthDegree * 0.1812080536912752) / 30.04518072289157;
+        var plutoDegree = (earthDegree * 0.1567114093959732) / 39.80206540447504;
+
+        document.querySelector('.earthRot').style.transition = 'transform 5s';
+        document.querySelector('.mercuryRot').style.transition = 'transform 5s';
+        document.querySelector('.venusRot').style.transition = 'transform 5s';
+        document.querySelector('.marsRot').style.transition = 'transform 5s';
+        document.querySelector('.jupiterRot').style.transition = 'transform 5s';
+        document.querySelector('.saturnRot').style.transition = 'transform 5s';
+        document.querySelector('.uranusRot').style.transition = 'transform 5s';
+        document.querySelector('.neptuneRot').style.transition = 'transform 5s';
+        document.querySelector('.plutoRot').style.transition = 'transform 5s';
+
+        document.querySelector('.earthRot').style.transform = 'rotate(' + earthDegree + 'deg)';
+        document.querySelector('.mercuryRot').style.transform = 'rotate(' + mercuryDegree + 'deg)';
+        document.querySelector('.venusRot').style.transform = 'rotate(' + venusDegree + 'deg)';
+        document.querySelector('.marsRot').style.transform = 'rotate(' + marsDegree + 'deg)';
+        document.querySelector('.jupiterRot').style.transform = 'rotate(' + jupiterDegree + 'deg)';
+        document.querySelector('.saturnRot').style.transform = 'rotate(' + saturnDegree + 'deg)';
+        document.querySelector('.uranusRot').style.transform = 'rotate(' + uranusDegree + 'deg)';
+        document.querySelector('.neptuneRot').style.transform = 'rotate(' + neptuneDegree + 'deg)';
+        document.querySelector('.plutoRot').style.transform = 'rotate(' + plutoDegree + 'deg)';
+    });
 
     document.querySelector('.moonWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
     document.querySelector('.innerWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
     document.querySelector('.moonRot').style.transform = 'rotate(' + moonDegree + 'deg)';
     document.querySelector('.earthRot').style.transform = 'rotate(' + earthDegree + 'deg)';
     document.querySelector('.earthRing').style.transform = 'rotate(-' + earthDegree + 'deg)';
+
+    document.querySelector('.earthRot').style.transition = 'transform 5s';
+    document.querySelector('.mercuryRot').style.transition = 'transform 5s';
+    document.querySelector('.venusRot').style.transition = 'transform 5s';
+    document.querySelector('.marsRot').style.transition = 'transform 5s';
+    document.querySelector('.jupiterRot').style.transition = 'transform 5s';
+    document.querySelector('.saturnRot').style.transition = 'transform 5s';
+    document.querySelector('.uranusRot').style.transition = 'transform 5s';
+    document.querySelector('.neptuneRot').style.transition = 'transform 5s';
+    document.querySelector('.plutoRot').style.transition = 'transform 5s';
 
     document.querySelector('.mercuryRot').style.transform = 'rotate(' + mercuryDegree + 'deg)';
     document.querySelector('.venusRot').style.transform = 'rotate(' + venusDegree + 'deg)';
@@ -137,6 +213,8 @@ function ageDegree(age) {
 }
 
 
+
+
 (function () {
 
     var parallax = document.querySelectorAll("body"),
@@ -150,7 +228,7 @@ function ageDegree(age) {
             if ((window.innerHeight - window.pageYOffset) >= document.body.offsetHeight - 25) {
                 console.log("top");
                 home.setAttribute('aria-expanded', true);
-            } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 600) {
+            } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 1700) {
                 merch.setAttribute('aria-expanded', true);
             } else {
                 home.setAttribute('aria-expanded', false);
