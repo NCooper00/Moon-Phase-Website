@@ -59,8 +59,8 @@ function shuffle(array) {
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
-  
-    return array;
+    mixedMusic = array;
+    // return array;
   }
 
 const shuffleEl = document.querySelector('.shuffle');
@@ -70,21 +70,23 @@ shuffleEl.addEventListener('click', () => {
     const shuffleStatus = shuffleEl.getAttribute('aria-enabled');
     if (shuffleStatus === "false") {
         shuffleEl.setAttribute('aria-enabled', true);
+        shuffle(allMusic);
+        console.log(mixedMusic);
     } else {
         shuffleEl.setAttribute('aria-enabled', false);
     }
     shuffleStatus;
 });
 
-var shuffledSongs = shuffle(allMusic);
+// var shuffledSongs = shuffle(allMusic);
 
-  source.forEach(element => {
-    for (var x=0; x<source.length; x++) {
-        source[x].setAttribute('src', spacey + allMusic[x] + mp3)
-    }
-});
-console.log(source[currentPos]);
-console.log(currentPos++);
+//   source.forEach(element => {
+//     for (var x=0; x<source.length; x++) {
+//         source[x].setAttribute('src', spacey + allMusic[x] + mp3)
+//     }
+// });
+// console.log(source[currentPos]);
+// console.log(currentPos++);
 
 // var sourcePos = 
 // var currentMusic = source[currentPos].getAttribute('src');
@@ -154,18 +156,65 @@ playBtn.addEventListener('click', () => {
     } else {
         playBtn.setAttribute('data-visible', true)
         musicBox.setAttribute('data-visible', true)
-        
-            // source.forEach(element => {
-            //     for (var x=0; x<source.length; x++) {
-            //         source[x].setAttribute('src', spacey + allMusic[x] + mp3)
-            //     }
-            // });
-            audioElement.setAttribute('src', currentMusic);
-            audioElement.load();
-            audioElement.play();
-            console.log(allMusic[currentPos]);
-            songScroll.textContent = allMusic[currentPos];  
-     
+        if (mixedMusic.length !== 0) {
+            
+
+            // audio.onended = ( () => {
+                if (currentPos < mixedMusic.length - 1) {
+                    currentPos++;
+
+                    // audioElement.pause();
+            
+                    playSource();
+
+            function setSource(_callback) {
+                source.forEach(element => {
+                    for (var x=0; x<source.length; x++) {
+                        source[x].setAttribute('src', spacey + mixedMusic[x] + mp3)
+                    }
+                });
+                _callback();
+            }
+
+            function playSource() {
+                setSource(function() {
+                    audioElement.setAttribute('src', currentMusic);
+                    audioElement.load();
+                    audioElement.play();
+                    console.log(mixedMusic[currentPos]);
+                    songScroll.textContent = mixedMusic[currentPos];  
+                })
+            }
+
+                } else {
+                    alert("You listened to all the songs!");
+                    // return;
+                }
+        } else {
+
+            // audioElement.pause();
+
+            playSource();
+
+            function setSource(_callback) {
+                source.forEach(element => {
+                    for (var x=0; x<source.length; x++) {
+                        source[x].setAttribute('src', spacey + allMusic[x] + mp3)
+                    }
+                });
+                _callback();
+            }
+
+            function playSource() {
+                setSource(function() {
+                    audioElement.setAttribute('src', currentMusic);
+                    audioElement.load();
+                    audioElement.play();
+                    console.log(allMusic[currentPos]);
+                    songScroll.textContent = allMusic[currentPos];  
+                })
+            }    
+        }
     }
 });
 
@@ -188,11 +237,11 @@ next.addEventListener('click', () => {
     currentPos++;
     const shuffleStatus = shuffleEl.getAttribute('aria-enabled');
         if (shuffleStatus === "true") {
-            var newShuffle = shuffle(allMusic);
+            // var newShuffle = shuffle(allMusic);
             audioElement.pause();
             source.forEach(element => {
                     for (var x=0; x<source.length; x++) {
-                        source[x].setAttribute('src', spacey + newShuffle[x] + mp3)
+                        source[x].setAttribute('src', spacey + mixedMusic[x] + mp3)
                     }
                 });
                 audioElement.setAttribute('src', currentMusic);
@@ -202,11 +251,11 @@ next.addEventListener('click', () => {
                 console.log(currentMusic);
                 console.log(newShuffle[currentPos])
         } else {
-            // source.forEach(element => {
-            //     for (var x=0; x<source.length; x++) {
-            //         source[x].setAttribute('src', spacey + allMusic[x] + mp3)
-            //     }
-            // });
+            source.forEach(element => {
+                for (var x=0; x<source.length; x++) {
+                    source[x].setAttribute('src', spacey + allMusic[x] + mp3)
+                }
+            });
             audioElement.setAttribute('src', currentMusic);
             audioElement.load();
             audioElement.play();

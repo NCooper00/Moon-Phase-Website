@@ -68,7 +68,10 @@ body {
     position: absolute;
     z-index: -50;
     width: 100px;
+    background-image: url('/svg/wonkey.svg');
     aspect-ratio: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
     animation: wonkeySVG 600s infinite;
     /* overflow: hidden; */
     cursor: pointer;
@@ -520,11 +523,13 @@ a:hover, a:active {
     width: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: white;
+    /* background: white; */
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0;
     margin-top: 55%;
-    transition: opacity 500ms ease-in-out;
-    transition-delay: 100ms;
+    transition: opacity 150ms ease-out;
+    transition-delay: 0ms;
 }
 
 .moonStats {
@@ -564,7 +569,7 @@ a:hover, a:active {
 .moonSVG {
     position: relative;
     top: 5%;
-    width: min-content;
+    width: min(600px, 85vw);
     aspect-ratio: 1;
     z-index: 9;
     display: flex;
@@ -576,7 +581,8 @@ a:hover, a:active {
 }
 
 .moonSVG:hover {
-    box-shadow: inset 0px 0px 90px 90px #000000;
+    box-shadow: inset 0px 0px 90px 90px #000000,
+    0px 0px 30px 10px white;
 }
 
 .moonSVG:hover .moonStats {
@@ -584,25 +590,45 @@ a:hover, a:active {
 }
 
 .moonSVG:hover .moonPhases {
-    padding: 75px;
-    box-shadow: 0px 0px 20px 10px white;
+    box-shadow: none;
+}
+
+.moonSVG:hover .moonWidget {
+    width: 75%;
+    padding: 0px 75px;
+    box-shadow: 0px 0px 5px 2px white;
+    transition: width 350ms ease-in-out, padding 500ms ease-in-out, box-shadow 500ms ease-in-out;
+
 }
 
 .moonSVG:hover .outerMoon {
     opacity: 100;
+    transition: opacity 500ms ease-out;
+    transition-delay: 500ms;
 }
 
 .moonPhases {
-    width: min(600px, 80vw);
+    width: 100%;
     aspect-ratio: 1;
-    border: 15px solid black;
+    transition: all 500ms;
+    border: 10px solid black;
     border-radius: 50%;
     justify-self: center;
     align-self: center;
     box-shadow: 0px 0px 50px 10px ;
-    animation: moonphases 2.5s;
-    transition: padding 500ms ease-in-out, box-shadow 500ms ease-in-out;
     /* z-index: 3; */
+}
+
+.moonWidget {
+    transition: width 350ms ease-in-out, padding 500ms ease-in-out, box-shadow 250ms ease-in-out;
+    animation: moonphases 2.5s;
+    aspect-ratio: 1;
+    width: 110%;
+    position: absolute;
+    background-image: url('/photos/moonWidget.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
 /* .moonPhases:hover {
@@ -713,6 +739,10 @@ a:hover, a:active {
         justify-content: center;
         border-radius: 0 0 0 0;
         z-index: 9999;
+    }
+
+    .musicBox:hover {
+        box-shadow: 0px 0px 15px rgb(50, 119, 248)
     }
     
     .musicBox[aria-expanded="true"] {

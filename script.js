@@ -7,7 +7,7 @@ console.log(apiUrl);
 const moonPhaseEl = document.querySelector('.moonStatus')
 
 const moon = document.getElementsByClassName('moonPhases');
-console.log(moon[0].children[1].children[6].children[6].outerHTML);
+// console.log(moon[0].children[1].children[6].children[6].outerHTML);
 console.log(moon);
 // console.log(moonSix);
 function getMoonData() {
@@ -21,40 +21,40 @@ function getMoonData() {
                     
                     moonPhaseEl.textContent = "Current Moon Phase: " + data[0].Phase;
 
-                    var highlight = "0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"
-                    if (data[0].Phase === "3rd Quarter") {
+                    // var highlight = "0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"
+                    // if (data[0].Phase === "3rd Quarter") {
                         
-                        moon[0].children[1].children[0].children[6].outerHTML = `<feColorMatrix id="moonOne" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[0].children[6].outerHTML = `<feColorMatrix id="moonOne" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "Waning Gibbous") {
+                    // } else if (data[0].Phase === "Waning Gibbous") {
                 
-                        moon[0].children[1].children[5].children[6].outerHTML = `<feColorMatrix id="moonTwo" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[5].children[6].outerHTML = `<feColorMatrix id="moonTwo" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "Full Moon") {
+                    // } else if (data[0].Phase === "Full Moon") {
                 
-                        moon[0].children[1].children[1].children[6].outerHTML = `<feColorMatrix id="moonThree" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[1].children[6].outerHTML = `<feColorMatrix id="moonThree" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "Waxing Gibbous") {
+                    // } else if (data[0].Phase === "Waxing Gibbous") {
                 
-                        moon[0].children[1].children[7].children[6].outerHTML = `<feColorMatrix id="moonSix" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[7].children[6].outerHTML = `<feColorMatrix id="moonSix" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "1st Quarter") {
+                    // } else if (data[0].Phase === "1st Quarter") {
                 
-                        moon[0].children[1].children[2].children[6].outerHTML = `<feColorMatrix id="moonFive" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[2].children[6].outerHTML = `<feColorMatrix id="moonFive" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "Waxing Crescent") {
+                    // } else if (data[0].Phase === "Waxing Crescent") {
                 
-                        moon[0].children[1].children[6].children[6].outerHTML = `<feColorMatrix id="moonFour" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[6].children[6].outerHTML = `<feColorMatrix id="moonFour" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "New Moon") {
+                    // } else if (data[0].Phase === "New Moon") {
                 
-                        moon[0].children[1].children[3].children[6].outerHTML = `<feColorMatrix id="moonSeven" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[3].children[6].outerHTML = `<feColorMatrix id="moonSeven" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    } else if (data[0].Phase === "Waning Crescent") {
+                    // } else if (data[0].Phase === "Waning Crescent") {
                 
-                        moon[0].children[1].children[4].children[6].outerHTML = `<feColorMatrix id="moonEight" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
+                    //     moon[0].children[1].children[4].children[6].outerHTML = `<feColorMatrix id="moonEight" type="matrix" values="0 0 0 0 0 0 0 0 0 10 0 0 0 10 0 0 0 0 0.25 0"></feColorMatrix>`      
 
-                    }
+                    // }
 
                 });
             } else {
@@ -74,6 +74,29 @@ function ageDegree(age) {
     const moonDegree = x/y;
 
     document.querySelector('.moonWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
+    console.log(moonDegree)
+    const outerMoon = document.querySelector('.outerMoon');
+    if (moonDegree > 337.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon1.png')";
+    } else if (moonDegree < 22.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon1.png')";
+    } else if (22.5 < moonDegree && moonDegree < 67.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon2.png')";
+    } else if (67.5 < moonDegree && moonDegree  < 112.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon3.png')";
+    } else if (112.5 < moonDegree && moonDegree < 157.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon4.png')";
+    } else if (157.5 < moonDegree && moonDegree < 202.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon5.png')";
+    } else if (202.5 < moonDegree && moonDegree < 247.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon6.png')";
+    } else if (247.5 < moonDegree && moonDegree < 292.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon7.png')";
+    } else if (292.5 < moonDegree && moonDegree < 337.5) {
+        outerMoon.style.backgroundImage = "url('photos/moon8.png')";
+    } else {
+        return;
+    }
 }
 
 
