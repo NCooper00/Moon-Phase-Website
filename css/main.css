@@ -53,10 +53,10 @@ body {
 body {
     /* width: 100vw; */
     /* height: 100vh; */
-    background: #0f0f0f;
+    background: #000000;
     background-image: url('https://ncooper00.github.io/Moon-Phase-Website/starry-night-2.jpg');
     background-repeat: no-repeat;
-    background-size: 100vh 100v;
+    background-size: 100vw 100vw;
     display: flex;
     /* overflow: hidden; */
     /* overscroll-behavior: hide; */
@@ -319,7 +319,12 @@ a:hover, a:active {
     align-items: center;
     justify-content: center;
     border-radius: 20vh 20vh 0 0;
+    box-shadow: 0px 0px 5px rgb(50, 119, 248);
     z-index: 9999;
+}
+
+.musicBox:hover {
+    box-shadow: 0px 0px 10px rgb(50, 119, 248);
 }
 
 .musicBox[aria-expanded="true"] {
@@ -464,7 +469,7 @@ a:hover, a:active {
 .shuffle[aria-enabled="true"] {
     background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/shuffle.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 25px;
     border-radius: 50%;
     aspect-ratio: 1;
@@ -483,27 +488,6 @@ a:hover, a:active {
     /* scroll-snap-type: y mandatory;
     overflow-y: scroll;
     overflow-x: hidden; */
-}
-
-.page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-}
-
-.pageCloud {
-    /* width: 100%; */
-    /* aspect-ratio: 100 / 10; */
-    position: absolute;
-    left: -29%;
-    /* top: 100%; */
-}
-
-.page2 {
-    flex-direction: column;
 }
 
 .moonWheel {
@@ -632,6 +616,7 @@ a:hover, a:active {
     aspect-ratio: 1;
     transition: all 500ms;
     border: 10px solid black;
+    animation: moonphases 2.5s;
     border-radius: 50%;
     justify-self: center;
     align-self: center;
@@ -641,7 +626,7 @@ a:hover, a:active {
 
 .moonWidget {
     transition: width 350ms ease-in-out, padding 500ms ease-in-out, box-shadow 250ms ease-in-out;
-    animation: moonphases 2.5s;
+    animation: moonphases 3s;
     aspect-ratio: 1;
     width: 110%;
     position: absolute;
@@ -663,8 +648,11 @@ a:hover, a:active {
     0% {transform:rotate(0deg);
     width: 0px;
     border: none;}
-    80% {transform:rotate(360deg);
+    60% {transform:rotate(360deg);
     border: none;}
+    85% {
+        transform: rotate(-5deg);
+    }
     100% {transform:rotate(0deg);}
 }
 

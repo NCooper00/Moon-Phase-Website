@@ -1,3 +1,5 @@
+var websiteAge;
+console.log(websiteAge);
 const currentDate = new Date()/1000 | 0;
 console.log(currentDate);
 const apiUrl = "https://api.farmsense.net/v1/moonphases/?d=" + currentDate;
@@ -71,10 +73,44 @@ function ageDegree(age) {
     var x = 360 * age;
     var y = 29.5;
 
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    console.log('Day of year: ' + day);
+
+    var a = 360 * day;
+    var b = 365;
+
     const moonDegree = x/y;
+    const earthDegree = a/b;
+ 
+    const mercuryDegree = (earthDegree * 1.60738255033557) / 0.3870481927710843;
+    const venusDegree = Math.floor(Math.random() * 361) + (earthDegree * 1.174496644295302) / 0.7233218588640275;
+    const marsDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.8087248322147651) / 1.523235800344234;
+    const jupiterDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.4395973154362416) / 5.204388984509466; 
+    const saturnDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.325503355704698) / 9.582616179001721;
+    const uranusDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.2281879194630872) / 19.19104991394148;
+    const neptuneDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.1812080536912752) / 30.04518072289157;
+    const plutoDegree = Math.floor(Math.random() * 361) + (earthDegree * 0.1567114093959732) / 39.80206540447504;
 
     document.querySelector('.moonWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
     document.querySelector('.innerWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
+    document.querySelector('.moonRot').style.transform = 'rotate(' + moonDegree + 'deg)';
+    document.querySelector('.earthRot').style.transform = 'rotate(' + earthDegree + 'deg)';
+    document.querySelector('.earthRing').style.transform = 'rotate(-' + earthDegree + 'deg)';
+
+    document.querySelector('.mercuryRot').style.transform = 'rotate(' + mercuryDegree + 'deg)';
+    document.querySelector('.venusRot').style.transform = 'rotate(' + venusDegree + 'deg)';
+    document.querySelector('.marsRot').style.transform = 'rotate(' + marsDegree + 'deg)';
+    document.querySelector('.jupiterRot').style.transform = 'rotate(' + jupiterDegree + 'deg)';
+    document.querySelector('.saturnRot').style.transform = 'rotate(' + saturnDegree + 'deg)';
+    document.querySelector('.uranusRot').style.transform = 'rotate(' + uranusDegree + 'deg)';
+    document.querySelector('.neptuneRot').style.transform = 'rotate(' + neptuneDegree + 'deg)';
+    document.querySelector('.plutoRot').style.transform = 'rotate(' + plutoDegree + 'deg)';
+
+
     console.log(moonDegree)
     const outerMoon = document.querySelector('.outerMoon');
     if (moonDegree > 337.5) {

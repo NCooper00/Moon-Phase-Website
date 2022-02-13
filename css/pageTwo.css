@@ -1,0 +1,355 @@
+.page {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.page2 {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.page2Head {
+    font-size: 3.5rem;
+    position: absolute;
+    color: white;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.planet {
+    cursor: pointer;
+}
+
+.outerRing {
+    position: absolute;
+    aspect-ratio: 1;
+    align-self: center;
+    /* bottom: 15%; */
+    left: 50%;
+    width: 40vw;
+    /* background-color: black; */
+    box-shadow: inset 0px 0px 100vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.innerRing1 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 32.5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plutoRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Pluto {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .3vw;
+    background-color: #51dcff;
+    border-radius: 50%;
+    top: -.5%;
+}
+
+.innerRing2 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 27.5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neptuneRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Neptune {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .9vw;
+    background-color: #3cc5e7;
+    border-radius: 50%;
+    top: -1.5%;
+}
+
+.innerRing3 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 22.5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uranusRing {
+    position: absolute;
+    aspect-ratio: 1;
+    top: -3%;
+    width: 1.5vw;
+    border-radius: 50%;
+    border: 2px outset rgb(79, 214, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uranusRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Uranus {
+    /* position: absolute; */
+    aspect-ratio: 1;
+    width: .9vw;
+    background-color: #41d3ff;
+    border-radius: 50%;
+    top: -4%;
+}
+
+.innerRing4 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 17.5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saturnRing {
+    position: absolute;
+    aspect-ratio: 1;
+    top: -5%;
+    width: 2vw;
+    border-radius: 50%;
+    border: 2px outset rgb(228, 192, 139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saturnRot {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Saturn {
+    /* position: absolute; */
+    aspect-ratio: 1;
+    width: 1.25vw;
+    background-color: #cf9b6a;
+    border-radius: 50%;
+    top: -4%;
+}
+
+.innerRing5 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 12.5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jupiterRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Jupiter {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1.3vw;
+    background-color: #68401b;
+    border-radius: 50%;
+    top: -4%;
+}
+
+.innerRing6 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 10vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marsRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Mars {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .55vw;
+    background-color: #ff4912;
+    border-radius: 50%;
+    top: -2%;
+}
+
+.innerRing7 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 7.5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venusRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Venus {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .55vw;
+    background-color: #be9c70;
+    border-radius: 50%;
+    top: -4%;
+}
+
+.innerRing8 {
+    position: absolute;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    width: 5vw;
+    /* background-color: black; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mercuryRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Mercury {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .5vw;
+    background-color: #ffa939;
+    border-radius: 50%;
+    top: -6%;
+}
+
+.Sun {
+    position: absolute;
+    aspect-ratio: 1;
+    /* border: 2px solid white; */
+    width: 2vw;
+    background-color: #ffc0b2;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px #ffaba0;
+}
+
+
+
+
+
+
+.earthRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.earthRing {
+    position: absolute;
+    aspect-ratio: 1;
+    top: -8%;
+    width: 1.5vw;
+    border-radius: 50%;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Earth {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .75vw;
+    background-color: #00bd55;
+    border-radius: 50%;
+}
+
+.moonRot {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Moon {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .1vw;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    top: -10%;
+}
