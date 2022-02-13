@@ -698,7 +698,7 @@ a:hover, a:active {
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1160px) {
     .moonPhase {
         color: white;
         font-size: 3em;
@@ -775,6 +775,7 @@ a:hover, a:active {
         border-radius: 0 0 0 0;
     }
 }
+
 
 @media screen and (max-width: 1000px) {
     .discIcon, .gitIcon, .contIcon, .musicIcon {
