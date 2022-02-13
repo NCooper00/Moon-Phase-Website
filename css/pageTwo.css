@@ -387,6 +387,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 500ms;
 }
 
 .saturnRing:hover {
