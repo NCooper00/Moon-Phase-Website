@@ -78,23 +78,23 @@ function ageDegree(age) {
     console.log(moonDegree)
     const outerMoon = document.querySelector('.outerMoon');
     if (moonDegree > 337.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon1.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon1.png')";
     } else if (moonDegree < 22.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon1.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon1.png')";
     } else if (22.5 < moonDegree && moonDegree < 67.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon2.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon2.png')";
     } else if (67.5 < moonDegree && moonDegree  < 112.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon3.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon3.png')";
     } else if (112.5 < moonDegree && moonDegree < 157.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon4.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon4.png')";
     } else if (157.5 < moonDegree && moonDegree < 202.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon5.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon5.png')";
     } else if (202.5 < moonDegree && moonDegree < 247.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon6.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon6.png')";
     } else if (247.5 < moonDegree && moonDegree < 292.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon7.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon7.png')";
     } else if (292.5 < moonDegree && moonDegree < 337.5) {
-        outerMoon.style.backgroundImage = "url('photos/moon8.png')";
+        outerMoon.style.backgroundImage = "url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon8.png')";
     } else {
         return;
     }
