@@ -74,6 +74,7 @@ function ageDegree(age) {
     const moonDegree = x/y;
 
     document.querySelector('.moonWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
+    document.querySelector('.innerWheel').style.transform = 'rotate(' + moonDegree + 'deg)';
     console.log(moonDegree)
     const outerMoon = document.querySelector('.outerMoon');
     if (moonDegree > 337.5) {
