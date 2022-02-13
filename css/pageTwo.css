@@ -199,6 +199,7 @@
 
 .planet {
     cursor: pointer;
+    transition: all 500ms;
 }
 
 .outerRing {
@@ -254,6 +255,15 @@
     top: -.5%;
 }
 
+.Pluto:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 0.8vw;
+    background-color: #51dcff;
+    border-radius: 50%;
+    top: -1%;
+}
+
 .innerRing2 {
     position: absolute;
     aspect-ratio: 1;
@@ -283,6 +293,15 @@
     top: -1.5%;
 }
 
+.Neptune:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1.4vw;
+    background-color: #3cc5e7;
+    border-radius: 50%;
+    top: -2%;
+}
+
 .innerRing3 {
     position: absolute;
     aspect-ratio: 1;
@@ -305,6 +324,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 500ms;
+}
+
+.uranusRing:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    top: -3.5%;
+    width: 2vw;
+    border-radius: 50%;
+    border: 2px outset rgb(79, 214, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .uranusRot {
@@ -319,6 +351,15 @@
     /* position: absolute; */
     aspect-ratio: 1;
     width: .9vw;
+    background-color: #41d3ff;
+    border-radius: 50%;
+    top: -4%;
+}
+
+.uranusRing:hover .Uranus {
+    /* position: absolute; */
+    aspect-ratio: 1;
+    width: 1.4vw;
     background-color: #41d3ff;
     border-radius: 50%;
     top: -4%;
@@ -348,6 +389,19 @@
     justify-content: center;
 }
 
+.saturnRing:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    top: -5.5%;
+    width: 2.5vw;
+    border-radius: 50%;
+    border: 2px outset rgb(228, 192, 139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms;
+}
+
 .saturnRot {
     height: 100%;
     width: 100%;
@@ -360,6 +414,15 @@
     /* position: absolute; */
     aspect-ratio: 1;
     width: 1.25vw;
+    background-color: #cf9b6a;
+    border-radius: 50%;
+    top: -4%;
+}
+
+.saturnRing:hover .Saturn {
+    /* position: absolute; */
+    aspect-ratio: 1;
+    width: 1.75vw;
     background-color: #cf9b6a;
     border-radius: 50%;
     top: -4%;
@@ -394,6 +457,15 @@
     top: -4%;
 }
 
+.Jupiter:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1.8vw;
+    background-color: #68401b;
+    border-radius: 50%;
+    top: -5%;
+}
+
 .innerRing6 {
     position: absolute;
     aspect-ratio: 1;
@@ -420,7 +492,16 @@
     width: .55vw;
     background-color: #ff4912;
     border-radius: 50%;
-    top: -2%;
+    top: -2.5%;
+}
+
+.Mars:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1.05vw;
+    background-color: #ff4912;
+    border-radius: 50%;
+    top: -4%;
 }
 
 .innerRing7 {
@@ -452,6 +533,15 @@
     top: -4%;
 }
 
+.Venus:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1.05vw;
+    background-color: #be9c70;
+    border-radius: 50%;
+    top: -6.5%;
+}
+
 .innerRing8 {
     position: absolute;
     aspect-ratio: 1;
@@ -478,7 +568,16 @@
     width: .5vw;
     background-color: #ffa939;
     border-radius: 50%;
-    top: -6%;
+    top: -4.5%;
+}
+
+.Mercury:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1vw;
+    background-color: #ffa939;
+    border-radius: 50%;
+    top: -9.5%;
 }
 
 .Sun {
@@ -486,6 +585,17 @@
     aspect-ratio: 1;
     /* border: 2px solid white; */
     width: 2vw;
+    background-color: #ff932d;
+    border-radius: 50%;
+    box-shadow: 0px 0px 500px 20px #ffb62e,
+    0px 0px 20px rgb(255, 255, 255);
+}
+
+.Sun:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    /* border: 2px solid white; */
+    width: 3vw;
     background-color: #ff932d;
     border-radius: 50%;
     box-shadow: 0px 0px 500px 20px #ffb62e,
@@ -523,6 +633,15 @@
     width: .75vw;
     background-color: #00bd55;
     border-radius: 50%;
+    z-index: 2;
+}
+
+.Earth:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 1.25vw;
+    background-color: #00bd55;
+    border-radius: 50%;
 }
 
 .moonRot {
@@ -540,4 +659,13 @@
     background-color: #C4C4C4;
     border-radius: 50%;
     top: -10%;
+}
+
+.Moon:hover {
+    position: absolute;
+    aspect-ratio: 1;
+    width: .6vw;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    top: -20%;
 }

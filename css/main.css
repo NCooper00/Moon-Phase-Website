@@ -2,6 +2,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    cursor: url();
+}
+
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
