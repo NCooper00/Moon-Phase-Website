@@ -412,10 +412,10 @@ a:hover, a:active {
         left: 100%;
     }
     80% {
-        left: -150%;
+        left: -200%;
     }
     100% {
-        left: -200%;
+        left: -250%;
     }
 }
 
