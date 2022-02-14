@@ -114,13 +114,24 @@ const music = document.querySelector('.musicBtn');
 const musicIcon = document.querySelector('.musicIcon');
 const musicBox = document.querySelector('.musicBox');
 
+const moonSVG = document.querySelector('.moonSVG');
+
+const musicStatus = music.getAttribute('aria-expanded');
+if (musicStatus === "false") {
+    moonSVG.style.top = '2.5%';
+} else {
+    moonSVG.style.top = '5%';
+}
+
 music.addEventListener('click', () => {
     const musicStatus = music.getAttribute('aria-expanded');
     if (musicStatus === "false") {
+        moonSVG.style.top = '5%';
         music.setAttribute('aria-expanded', true);
         musicIcon.setAttribute('aria-expanded', true);
         musicBox.setAttribute('aria-expanded', true);
     } else {
+        moonSVG.style.top = '2.5%';
         music.setAttribute('aria-expanded', false);
         musicIcon.setAttribute('aria-expanded', false);
         musicBox.setAttribute('aria-expanded', false);

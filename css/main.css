@@ -209,6 +209,11 @@ a:hover, a:active {
     border-style: none none solid none;
 }
 
+.solar[aria-expanded="true"] {
+    border: 2px white;
+    border-style: none none solid none;
+}
+
 .merch[aria-expanded="true"] {
     border: 2px white;
     border-style: none none solid none;
@@ -309,20 +314,40 @@ a:hover, a:active {
     font-size: 1.1em;
 }
 
+.musicLeft {
+    border-radius: 0 20vh 0 0;
+    /* left: 0%; */
+    width: 50%;
+    left: 0%;
+}
+
+.musicMiddle {
+    left: 50%;
+    margin-left: 25%;
+    border-radius: 20vh 20vh 0 0;
+    width: 50%;
+}
+
+.musicBottom {
+    width: 100%;
+    border-radius: 0 0 0 0;
+    /* right: auto; */
+}
+
 .musicBox {
     position: fixed;
     bottom: 0;
-    left: 0%;
-    /* margin-left: -25%; */
-    width: 50%;
+    /* right: 50%; */
+    /* right: auto; */
+    left: auto;
     height: 85px;
     background: hsl(0 0% 100% / 0.05);
     backdrop-filter: blur(1rem);
-    transition: bottom 500ms, box-shadow 500ms;
+    transition: bottom 750ms, box-shadow 750ms, margin-left 750ms, right 750ms, left 750ms, width 750ms;
+    /* transition-delay: 0s, 0s, 0s, 0s, 0s; */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 20vh 0 0;
     box-shadow: 0px 0px 5px rgb(50, 119, 248);
     z-index: 9999;
 }
@@ -390,7 +415,7 @@ a:hover, a:active {
     position: absolute;
     display: inline-block;
     left: 2%;
-    border-radius: 0 0 0 0;
+    border-radius: 10vh 0 0 0;
     overflow: hidden;
 }
 
@@ -576,7 +601,7 @@ a:hover, a:active {
 
 .moonSVG {
     position: relative;
-    top: 5%;
+    top: 2.5%;
     width: min(600px, 85vw);
     aspect-ratio: 1;
     z-index: 9;
@@ -584,7 +609,7 @@ a:hover, a:active {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: box-shadow 500ms ease-in-out;
+    transition: box-shadow 500ms ease-in-out, top 1.5s ease-in-out;
     /* background-color: red; */
 }
 

@@ -68,7 +68,8 @@ function getMoonData() {
         });
 };
 getMoonData();
-
+const order = document.querySelector('.orderSolar');
+order.classList.add('orderHover1')
 function ageDegree(age) {
     var x = 360 * age;
     var y = 29.5;
@@ -127,9 +128,10 @@ function ageDegree(age) {
         document.querySelector('.neptuneRot').style.transform = 'rotate(' + neptuneDegree + 'deg)';
         document.querySelector('.plutoRot').style.transform = 'rotate(' + plutoDegree + 'deg)';
     });
-
-    const order = document.querySelector('.orderSolar');
+    
     order.addEventListener('click', () => {
+        // order.style = 'transform: rotate(' + rot + 'deg)';
+
         var earthDegree = a/b;
         var mercuryDegree = (earthDegree * 1.60738255033557) / 0.3870481927710843;
         var venusDegree = (earthDegree * 1.174496644295302) / 0.7233218588640275;
@@ -214,35 +216,6 @@ function ageDegree(age) {
 
 
 
-
-(function () {
-
-    var parallax = document.querySelectorAll("body"),
-        speed = 0.7;
-
-    window.onscroll = function () {
-
-        [].slice.call(parallax).forEach(function (el, i) {
-            const home = document.querySelector('.home');
-            const merch = document.querySelector('.merch');
-            if ((window.innerHeight - window.pageYOffset) >= document.body.offsetHeight - 25) {
-                console.log("top");
-                home.setAttribute('aria-expanded', true);
-            } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 1700) {
-                merch.setAttribute('aria-expanded', true);
-            } else {
-                home.setAttribute('aria-expanded', false);
-                merch.setAttribute('aria-expanded', false);
-            }
-
-            var windowYOffset = window.pageYOffset,
-                elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-            el.style.backgroundPosition = elBackgrounPos;
-
-        });
-    };
-})();
 
 
 const optionMenu = document.querySelector('.optionMenu');
