@@ -2,8 +2,8 @@
     scroll-behavior: smooth;
 }
 
-body {
-    cursor: url();
+body, html {
+    height: 100%;
 }
 
 button, input[type="submit"], input[type="reset"] {
@@ -58,9 +58,11 @@ body {
     /* width: 100vw; */
     /* height: 100vh; */
     background: #000000;
-    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/starry-night-2.jpg');
+    background-image: url('/space-website-background.jpg');
+    /* background-attachment: fixed; */
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vh 100v;
+    background-size: cover;
     display: flex;
     /* overflow: hidden; */
     /* overscroll-behavior: hide; */

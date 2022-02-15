@@ -1,3 +1,6 @@
+
+
+
 .page {
     width: 100%;
     height: 100%;
@@ -8,21 +11,31 @@
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
-    column-gap: 45%;
+    /* column-gap: 45%; */
+}
+
+.page2Info {
+    width: 50vw;
+    height: fit-content;
+    background-color: red;
+}
+
+.page2System {
+    width: 50vw;
 }
 
 .page2Head {
     font-size: 3.5rem;
-    position: absolute;
+    /* position: absolute; */
     color: white;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     padding-bottom: 5px;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     border-bottom: 2px solid white;
 }
 
 .randomizeSolar {
-    position: absolute;
+    /* position: absolute; */
     right: -20%;
     top: 15%;
     width: 50px;
@@ -132,7 +145,7 @@
 }
 
 .orderSolar {
-    position: absolute;
+    /* position: absolute; */
     right: -40%;
     top: 15%;
     width: 50px;
@@ -203,9 +216,9 @@
     aspect-ratio: 1;
     align-self: center;
     /* bottom: 15%; */
-    top: -12%;
-    left: 50%;
-    width: 40vw;
+    /* top: -12%; */
+    /* left: 50%; */
+    width: 100%;
     /* background-color: black; */
     box-shadow: inset 0px 0px 100vh;
     border-radius: 50%;
@@ -581,7 +594,7 @@
     width: 2vw;
     background-color: #ff932d;
     border-radius: 50%;
-    box-shadow: 0px 0px 500px 20px #ffb62e,
+    box-shadow: 0px 0px 500px 20px #ffebc7,
     0px 0px 20px rgb(255, 255, 255);
 }
 
@@ -592,7 +605,7 @@
     width: 3vw;
     background-color: #ff932d;
     border-radius: 50%;
-    box-shadow: 0px 0px 500px 20px #ffb62e,
+    box-shadow: 0px 0px 800px 35px #ffb62e,
     0px 0px 20px rgb(255, 255, 255);
 }
 

@@ -45,7 +45,7 @@ page1Observer.observe(page1);
 (function () {
 
     var parallax = document.querySelectorAll("body"),
-        speed = 0.7;
+        speed = 0.5;
 
     window.onscroll = function () {
 
