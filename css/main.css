@@ -174,7 +174,7 @@ body {
     user-select: none;
     line-height: 120px;
     font-weight: 600;
-    padding: 0 100px;
+    padding: 0 50px;
     /* width: max-content; */
 }
 
@@ -725,7 +725,7 @@ a:hover, a:active {
 
 
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1260px) {
     .moonPhase {
         color: white;
         font-size: 3em;
@@ -804,7 +804,7 @@ a:hover, a:active {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .discIcon, .gitIcon, .contIcon, .musicIcon {
         display: none;
     }
@@ -987,6 +987,34 @@ a:hover, a:active {
 }
 
 @media screen and (max-width: 450px) {
+    .moonStats {
+        font-size: 1em;
+    }
+    .moonSVG:hover .moonPhases {
+        padding: 25px;
+        box-shadow: 0px 0px 20px 10px white;
+    }
+    .outerMoon {
+        width: 25px;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 292px) {
+    .moonPhase {
+        color: white;
+        font-size: 1.95em;
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 35px;
+        font-weight: 600;
+        padding: 20px 25px;
+        /* flex: none; */
+        /* width: max-content; */
+    }
     .moonStats {
         font-size: 1em;
     }
