@@ -9,7 +9,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 body {
-    background-image: url("ncooper00.github.io/Moon-Phase-Website/photos/starry-night.jpg");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/photos/starry-night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Share Tech Mono', monospace;
@@ -265,7 +265,7 @@ body {
     width: 5%;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-image: url('ncooper00.github.io/Moon-Phase-Website/photos/moon5.png');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/photos/moon5.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
