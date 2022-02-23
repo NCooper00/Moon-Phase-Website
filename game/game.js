@@ -167,7 +167,11 @@ Options.addEventListener('click', () => {
 
 const highSCORE = document.querySelector('.highScores');
 function setScore(){
-    highSCORE.innerHTML = "High Score: " + highScores;
+    if (!highScores) {
+        highSCORE.innerHTML = "High Score: 0";
+    } else {
+        highSCORE.innerHTML = "High Score: " + highScores;
+    }
 }
 
 
