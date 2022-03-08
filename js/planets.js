@@ -1,7 +1,7 @@
 console.log("hello world");
 
 const nasaAPIKey = "jlzGqnF4dgyAGALdFxCrzt8FKZIF8Wbf8Ghso5ll";
-const nasaIODLink = "https://api.nasa.gov/planetary/apod?count=50&api_key="
+const nasaIODLink = "https://api.nasa.gov/planetary/apod?count=50&api_key=";
 
 const SUN = document.querySelector('.Sun');
 const MERCURY = document.querySelector('.Mercury');
@@ -78,26 +78,41 @@ for (i=0; i<PLANET.length; i++) {
     });
 }
 
+
+const imageCounter = document.querySelector('.imageCounter');
+
 const IOD = document.querySelector('.IOD');
 var currentIMGNum = 0;
+var currentImageCount = currentIMGNum + 1;
+imageCounter.textContent = currentImageCount + "/50";
 
 var imgTitle = document.querySelector('.imageTitle');
 
 const descSection = document.querySelector('.imageDescSection');
 const descArrow = document.querySelector('.descArrow');
 const imgDesc = document.querySelector('.imageDesc');
+const imageDate = document.querySelector('.imageDate');
+const imageCredit = document.querySelector('.imageCredit');
 
 fetch(nasaIODLink+nasaAPIKey)
 .then(function (response) {
     if (response.ok) {
         response.json().then(function (data) {
             imageData = data;
-            IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+            // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+            IOD.setAttribute('src', imageData[currentIMGNum].url);
             imgTitle.textContent = imageData[currentIMGNum].title;
             imgDesc.textContent = imageData[currentIMGNum].explanation;
+            imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
+            if (imageData[currentIMGNum].copyright) {
+                imageCredit.textContent = "Credit: " + imageData[currentIMGNum].copyright;
+            } else {
+                imageCredit.textContent = "Credit: NASA Images"
+            }
             console.log(imageData);
             console.log(imageData[0].hdurl);
         });
+        // currentIMGNum++;
     } else {
         alert("Error: " + response.statusText);
     }
@@ -125,30 +140,66 @@ const nextImg = document.querySelector('.rightArrow');
 prevImg.addEventListener('click', () => {
     if (currentIMGNum === 0) {
         currentIMGNum = 49;
-        currentIMGNum--;
-        IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        currentImageCount = 50;
+        // currentIMGNum--;
+        // currentImageCount--;
+        // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
         imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
+        imageCounter.textContent = currentImageCount + "/50";
+        if (imageData[currentIMGNum].copyright) {
+            imageCredit.textContent = "Credit: " + imageData[currentIMGNum].copyright;
+        } else {
+            imageCredit.textContent = "Credit: NASA Images"
+        }
     } else {
         currentIMGNum--;
-        IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        currentImageCount--;
+        // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
         imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
+        imageCounter.textContent = currentImageCount + "/50";
+        if (imageData[currentIMGNum].copyright) {
+            imageCredit.textContent = "Credit: " + imageData[currentIMGNum].copyright;
+        } else {
+            imageCredit.textContent = "Credit: NASA Images"
+        }
     }
     imgDesc.style.marginBottom = "-100%";
 })
 nextImg.addEventListener('click', () => {
     if (currentIMGNum === 49) {
         currentIMGNum = 0;
-        currentIMGNum++;
-        IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        currentImageCount = 1;
+        // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
         imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
+        imageCounter.textContent = currentImageCount + "/50";
+        if (imageData[currentIMGNum].copyright) {
+            imageCredit.textContent = "Credit: " + imageData[currentIMGNum].copyright;
+        } else {
+            imageCredit.textContent = "Credit: NASA Images"
+        }
     } else {
         currentIMGNum++;
-        IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        currentImageCount++;
+        // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
         imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
+        imageCounter.textContent = currentImageCount + "/50";
+        if (imageData[currentIMGNum].copyright) {
+            imageCredit.textContent = "Credit: " + imageData[currentIMGNum].copyright;
+        } else {
+            imageCredit.textContent = "Credit: NASA Images"
+        }
     }
     imgDesc.style.marginBottom = "-100%";
 })

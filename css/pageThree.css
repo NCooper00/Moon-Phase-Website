@@ -65,6 +65,8 @@
     justify-content: center;
     /* align-items: center; */
     overflow-y: hidden;
+    box-shadow: 0px 0px 15px white;
+    border-radius: 5px;
 }
 
 .IODHolder > * {
@@ -79,6 +81,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 1s;
 }
 
 .imageTitle {
@@ -97,6 +100,25 @@
     background: hsl(0 0% 0% / 0.75);
 }
 
+.imageCounter {
+    position: relative;
+    top: 0;
+    right: 0;
+    align-self: flex-start;
+    justify-self: flex-end;
+    text-align: center;
+    /* float: left; */
+    color: white;
+    max-width: min(300px, 50%);
+    line-height: 1.25;
+    font-size: 20px;
+    border-radius: 0px 0px 0px 10px;
+    padding: 10px 15px;
+    /* top: 0; */
+    /* left: 50%; */
+    background: hsl(0 0% 0% / 0.75);
+}
+
 .imageDescSection {
     position: relative;
     align-self: flex-end;
@@ -105,10 +127,10 @@
     max-height: 100%;
     /* bottom: -38.5%; */
     height: fit-content;
-    border-radius: 10px 10px 0px 0px;
+    /* border-radius: 10px 10px 0px 0px; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     font-size: 16px;
     line-height: 1.5;
@@ -116,14 +138,51 @@
     /* background-color: hsl(0 0% 0% / 0.75); */
 }
 
+.imageDate {
+    /* position: relative; */
+    text-align: center;
+    float: left;
+    color: white;
+    width: 33%;
+    height: 36px;
+    line-height: 1;
+    font-size: 16px;
+    padding: 10px 5px;
+    border-radius: 0px 10px 0px 0px;
+    /* top: 0; */
+    /* left: 50%; */
+    background: hsl(0 0% 0% / 0.75);
+}
+
+.imageCredit {
+    /* position: relative; */
+    text-align: center;
+    float: left;
+    color: white;
+    width: 33%;
+    height: 36px;
+    line-height: 1;
+    font-size: 16px;
+    padding: 10px 5px;
+    border-radius: 10px 0px 0px 0px;
+    overflow-y: scroll;
+    /* top: 0; */
+    /* left: 50%; */
+    background: hsl(0 0% 0% / 0.75);
+}
+
 .arrowHolder {
-    min-width: 40px;
-    aspect-ratio: 1.5;
-    background-color: hsl(0 0% 0% / 0.75);
-    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    justify-self: center;
+    width: fit-content;
+    height: 36px;
     display: grid;
     place-content: center;
     margin-bottom: -.095px;
+    padding: 0px 10px;
+    place-self: middle;
+    background-color: hsl(0 0% 0% / 0.75);
+    border-radius: 10px 10px 0px 0px;
 }
 
 .descArrow {
