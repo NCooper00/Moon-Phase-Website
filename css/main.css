@@ -17,7 +17,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 ::-webkit-scrollbar {
-    width: 1em;
+    width: .5em;
     height: 1rem;
 }
 
@@ -31,14 +31,15 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 ::-webkit-scrollbar-track:hover {
-    box-shadow: inset 0px 0px 10px #909090;
+    box-shadow: inset 0px 0px 10px #1b1b1b;
     cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
     background: black;
-    border: 2px solid #909090;
+    border: 1px solid #909090;
     /* border-radius: 100vh; */
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -126,6 +127,61 @@ body {
         left: 10vw;
         width: 100px;
     }
+}
+
+@keyframes UKRAINE {
+    0% {
+        bottom: 90vh;
+        right: 10vw;
+    }
+    16.5% {
+        bottom: 25vh;
+        right: 76vw;
+        width: 50px;
+    }
+    30% {
+        bottom: 10vh;
+        right: 50vw;
+        width: 20px;
+    }
+    40.5% {
+        bottom: 25vh;
+        right: 10vw;
+    }
+    55% {
+        bottom: 90vh;
+        right: 65vw;
+        width: 85px;
+    }
+    66.5% {
+        bottom: 50vh;
+        right: 76vw;
+        width: 60px;
+    }
+    85% {
+        bottom: 20vh;
+        right: 25vw;
+        width: 80px;
+    }
+    100% {
+        bottom: 90vh;
+        right: 10vw;
+        width: 25px;
+    }
+}
+
+.UKRAINE {
+    position: absolute;
+    z-index: -50;
+    width: 25px;
+    background-image: url('/ukraine.png');
+    aspect-ratio: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: UKRAINE 400s infinite;
+    /* overflow: hidden; */
+    opacity: 25%;
+    cursor: pointer;
 }
 
 .navbar {
@@ -216,7 +272,7 @@ a:hover, a:active {
     border-style: none none solid none;
 }
 
-.merch[aria-expanded="true"] {
+.images[aria-expanded="true"] {
     border: 2px white;
     border-style: none none solid none;
 }
@@ -269,6 +325,7 @@ a:hover, a:active {
     background: hsl(0 0% 100% / 0.05);
     backdrop-filter: blur(2px);
     transition: all 500ms ease;
+    z-index: 9999;
 }
 
 .optionLi {
@@ -841,7 +898,7 @@ a:hover, a:active {
     .navLinks {
         position: fixed;
         width: 100%;
-        height: 300%;
+        height: 350%;
         background: hsl(0 0% 0% / .85);
         backdrop-filter: blur(1rem);
         top: 120px;
@@ -874,7 +931,7 @@ a:hover, a:active {
         position: fixed;
         /* left: 32.5%; */
         /* display: inline-block; */
-        top: 420px;
+        top: 485px;
         align-items: center;
         justify-content: center;
         right: 0;
@@ -887,7 +944,7 @@ a:hover, a:active {
         height: fit-content;
         /* flex-wrap: wrap; */
         
-        top: 420px;
+        top: 485px;
         right: -100%;
         /* display: inline-block; */
         padding: 5px 0px 5px 0px;
@@ -895,7 +952,6 @@ a:hover, a:active {
         background: hsl(0 0% 0% / .5);
         backdrop-filter: none;
         transition: all 500ms ease;
-        z-index: 9999;
     }
 
     /* .optionLinks {
@@ -987,6 +1043,17 @@ a:hover, a:active {
 }
 
 @media screen and (max-width: 450px) {
+    .moonPhase {
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+        user-select: none;
+        line-height: 120px;
+        font-weight: 600;
+        padding: 0px 0px 0px 25px;
+        /* flex: none; */
+        /* width: max-content; */
+    }
     .moonStats {
         font-size: 1em;
     }
@@ -1065,7 +1132,6 @@ a:hover, a:active {
         background: hsl(0 0% 0% / .5);
         backdrop-filter: none;
         transition: all 500ms ease;
-        z-index: 9999;
     }
     .optionMenu[aria-expanded="true"] {
         position: fixed;

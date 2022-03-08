@@ -8,5 +8,178 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.imageHolder {
+    width: 100%;
+    height: 65%;
+    background: hsl(0 0% 0% / 0.25);
+    box-shadow: 0px 0px 15px white;
+    /* backdrop-filter: blur(1rem); */
+    position: relative;
+    margin-bottom: -2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftArrow, .rightArrow {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    aspect-ratio: 1;
+    margin-right: 15px;
+    -webkit-filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    filter:         drop-shadow(0px 0px 2px rgb(255, 255, 255)); 
+    transition: filter 200ms, width 100ms, transform 50ms;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.leftArrow {
+    background-image: url("/page-three-images/previous-arrow.png");
+}
+
+.rightArrow {
+    background-image: url("/page-three-images/next-arrow.png");
+}
+
+.leftArrow:hover, .rightArrow:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgb(40, 151, 255));
+    filter:         drop-shadow(0px 0px 5px rgb(40, 151, 255)); 
+}
+
+.leftArrow:active, .rightArrow:active {
+    transform: translateY(2px);
+}
+
+.IODHolder {
+    height: min-content;
+    width: min-content;
+    overflow: hidden;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+    justify-content: center;
+    /* align-items: center; */
+    overflow-y: hidden;
+}
+
+.IODHolder > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.IOD {
+    max-height: 60vh;
+    max-width: 60vw;
+    font-size: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageTitle {
+    position: relative;
+    align-self: flex-start;
+    text-align: center;
+    /* float: left; */
+    color: white;
+    max-width: min(300px, 50%);
+    line-height: 1.25;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px 15px;
+    /* top: 0; */
+    /* left: 50%; */
+    background: hsl(0 0% 0% / 0.75);
+}
+
+.imageDescSection {
+    position: relative;
+    align-self: flex-end;
+    color: white;
+    max-width: 100%;
+    max-height: 100%;
+    /* bottom: -38.5%; */
+    height: fit-content;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+    /* background-color: hsl(0 0% 0% / 0.75); */
+}
+
+.arrowHolder {
+    min-width: 40px;
+    aspect-ratio: 1.5;
+    background-color: hsl(0 0% 0% / 0.75);
+    border-radius: 10px 10px 0px 0px;
+    display: grid;
+    place-content: center;
+    margin-bottom: -.095px;
+}
+
+.descArrow {
+    background-image: url(/page-three-images/desc-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 30px;
+    aspect-ratio: 1.5;
+    cursor: pointer;
+    position: relative;
+    align-self: flex-start;
+    transition: filter 200ms, transform 250ms;
+    -webkit-filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    filter:         drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}
+
+.descArrow:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgb(40, 151, 255));
+    filter:         drop-shadow(0px 0px 5px rgb(40, 151, 255));
+}
+
+.descArrow[aria-enabled="true"] {
+    transform: rotate(180deg);
+}
+
+.imageDesc {
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: -100%;
+    padding: 10px;
+    /* display: flex; */
+    text-align: center;
+    /* margin: 0% 100%; */
+    /* justify-self: center; */
+    background-color: hsl(0 0% 0% / 0.85);
+    transition: margin-bottom 500ms ease-in-out;
+    /* background-color: rgba(206, 40, 40, 0.75); */
+    overflow-wrap: break-word;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* .imageDesc[data-visible="true"] {
+    transform: translateY();
+} */
+
+@media screen and (max-width: 550px) {
+    .imageTitle {
+        font-size: 15px;
+        line-height: 1;
+    }
+    .imageDescSection {
+        font-size: 12px;
+    }
+    .imageDesc {
+        margin: 5px;
+    }
 }

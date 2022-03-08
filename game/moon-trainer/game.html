@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Cinzel+Decorative:wght@400;700;900&family=Dancing+Script&family=Merriweather:ital,wght@1,300&family=Neonderthaw&family=Play&family=Romanesco&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <title>Game</title>
+</head>
+<body onload="setScore()">
+    <div class="backgroundBright"></div>
+
+    <div class="gameArea">
+        <div class="moon">
+            <div class="string" data-visible="false"></div>
+        </div>
+    </div>
+
+    <!-- <div class="backHomeBx">
+        <div class="backHome">Back Home</div>
+    </div>
+
+    <div class="highScoresBx">
+        <div class="highScores">High Scores</div>
+    </div>
+
+    <div class="optionsBx">
+        <div class="options">Options</div>
+    </div> -->
+
+    <div class="topHud">
+        <div class="backHome" onclick="window.location.href='https://ncooper00.github.io/Moon-Phase-Website'">Back Home</div>
+        <div class="highScores">High Score: 0</div>
+        <div class="options">Options</div>
+    </div>
+
+    <div class="moonTrainer">Moon Trainer</div>
+
+    <div class="optionsDim" data-visible="false">
+        <div class="optionsMenu">
+            <ul class="optionsHolder">
+                <li class="option">
+                    Background Blur
+                    <input type="range" min="1" max="100" value="50" class=" dimOption">
+                    <div class="dimPercent">
+                        <div class="percent">50%</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- <div class="optionsBx2">
+    </div> -->
+
+    <div class="hud">
+        <div class="healthLeft health"></div>
+        <div class="healthRight health"></div>
+        <div class="score">Score: 0</div>
+        <div class="scoreInvis">0</div>
+        <button aria-enabled="false" class="start">Start Game</button>
+        <div class="timer">Time Left: 1:00</div>
+    </div>
+
+    <div class="gameOverBlur" aria-enabled="false">
+        <div class="gameOverMenu">
+            <div class="GOHeader">Game Over!</div>
+            <div class="GOScore">
+                Your Score Was:
+            </div>
+            <div class="newHigh"></div>
+            <div class="GOReset">
+                <div class="goInnerReset">
+                    Reset
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="game.js"></script>
+</html>

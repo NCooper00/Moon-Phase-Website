@@ -51,21 +51,21 @@ page1Observer.observe(page1);
 
         [].slice.call(parallax).forEach(function (el, i) {
             const home = document.querySelector('.home');
-            const merch = document.querySelector('.merch');
+            const images = document.querySelector('.images');
             const solar = document.querySelector('.solar')
             if ((window.innerHeight - window.pageYOffset) >= document.body.offsetHeight - 250) {
                 console.log("top");
                 solar.setAttribute('aria-expanded', false);
                 home.setAttribute('aria-expanded', true);
             } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 1700) {
-                merch.setAttribute('aria-expanded', true);
+                images.setAttribute('aria-expanded', true);
                 solar.setAttribute('aria-expanded', false);
                 musicBoxSelect.classList.remove('musicLeft')
                 musicBoxSelect.classList.remove('musicMiddle')
                 musicBoxSelect.classList.add('musicBottom')
             } else {
                 home.setAttribute('aria-expanded', false);
-                merch.setAttribute('aria-expanded', false);
+                images.setAttribute('aria-expanded', false);
                 solar.setAttribute('aria-expanded', true);
                 musicBoxSelect.classList.remove('musicBottom')
                 musicBoxSelect.classList.add('musicLeft')
