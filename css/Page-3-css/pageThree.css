@@ -56,7 +56,7 @@
 }
 
 .IODHolder {
-    height: min-content;
+    min-height: 20vh;
     width: min-content;
     overflow: hidden;
     display: grid;
@@ -76,11 +76,11 @@
 
 .IOD {
     max-height: 60vh;
-    max-width: 60vw;
+    min-width: 40vw;
     font-size: 0px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     transition: all 1s;
 }
 
@@ -224,6 +224,13 @@
     overflow-wrap: break-word;
     overflow: scroll;
     overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgLink {
+    width: 100%;
+    color: red;
 }
 
 /* .imageDesc[data-visible="true"] {

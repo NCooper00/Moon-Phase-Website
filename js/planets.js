@@ -100,9 +100,10 @@ fetch(nasaIODLink+nasaAPIKey)
         response.json().then(function (data) {
             imageData = data;
             // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+            IOD.setAttribute('src', "/page-three-images/loading-image.png");
             IOD.setAttribute('src', imageData[currentIMGNum].url);
             imgTitle.textContent = imageData[currentIMGNum].title;
-            imgDesc.textContent = imageData[currentIMGNum].explanation;
+            imgDesc.textContent = imageData[currentIMGNum].explanation + " Link: " + imageData[currentIMGNum].url;
             imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
             if (imageData[currentIMGNum].copyright) {
                 imageCredit.textContent = "Credit: " + imageData[currentIMGNum].copyright;
@@ -138,15 +139,17 @@ descArrow.addEventListener('click', () => {
 const prevImg = document.querySelector('.leftArrow');
 const nextImg = document.querySelector('.rightArrow');
 prevImg.addEventListener('click', () => {
+    descArrow.setAttribute('aria-enabled', false);
     if (currentIMGNum === 0) {
         currentIMGNum = 49;
         currentImageCount = 50;
         // currentIMGNum--;
         // currentImageCount--;
         // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', "/page-three-images/loading-image.png");
         IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
-        imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imgDesc.textContent = imageData[currentIMGNum].explanation + " Link: " + imageData[currentIMGNum].url;
         imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
         imageCounter.textContent = currentImageCount + "/50";
         if (imageData[currentIMGNum].copyright) {
@@ -158,9 +161,10 @@ prevImg.addEventListener('click', () => {
         currentIMGNum--;
         currentImageCount--;
         // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', "/page-three-images/loading-image.png");
         IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
-        imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imgDesc.textContent = imageData[currentIMGNum].explanation + " Link: " + imageData[currentIMGNum].url;
         imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
         imageCounter.textContent = currentImageCount + "/50";
         if (imageData[currentIMGNum].copyright) {
@@ -172,13 +176,15 @@ prevImg.addEventListener('click', () => {
     imgDesc.style.marginBottom = "-100%";
 })
 nextImg.addEventListener('click', () => {
+    descArrow.setAttribute('aria-enabled', false);
     if (currentIMGNum === 49) {
         currentIMGNum = 0;
         currentImageCount = 1;
         // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', "/page-three-images/loading-image.png");
         IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
-        imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imgDesc.textContent = imageData[currentIMGNum].explanation + " Link: " + imageData[currentIMGNum].url;
         imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
         imageCounter.textContent = currentImageCount + "/50";
         if (imageData[currentIMGNum].copyright) {
@@ -190,9 +196,10 @@ nextImg.addEventListener('click', () => {
         currentIMGNum++;
         currentImageCount++;
         // IOD.setAttribute('src', imageData[currentIMGNum].hdurl);
+        IOD.setAttribute('src', "/page-three-images/loading-image.png");
         IOD.setAttribute('src', imageData[currentIMGNum].url);
         imgTitle.textContent = imageData[currentIMGNum].title;
-        imgDesc.textContent = imageData[currentIMGNum].explanation;
+        imgDesc.textContent = imageData[currentIMGNum].explanation + " Link: " + imageData[currentIMGNum].url;
         imageDate.textContent = "Date: " + imageData[currentIMGNum].date;
         imageCounter.textContent = currentImageCount + "/50";
         if (imageData[currentIMGNum].copyright) {
