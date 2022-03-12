@@ -52,7 +52,7 @@
     top: 15%;
     width: 50px;
     aspect-ratio: 1;
-    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/icons/dice.png');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/dice.png');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -162,7 +162,7 @@
     top: 15%;
     width: 50px;
     aspect-ratio: 1;
-    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/icons/order.png');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/order.png');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;

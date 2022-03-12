@@ -59,7 +59,7 @@ body {
     /* width: 100vw; */
     /* height: 100vh; */
     background: #000000;
-    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/space-website-background.jpg');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Images/space-website-background.jpg');
     /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
@@ -75,7 +75,7 @@ body {
     position: absolute;
     z-index: -50;
     width: 100px;
-    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/svg/wonkey.svg');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/ASSETS/SVG/wonkey.svg');
     aspect-ratio: 1;
     background-size: cover;
     background-repeat: no-repeat;
@@ -174,7 +174,7 @@ body {
     position: absolute;
     z-index: -50;
     width: 25px;
-    background-image: url('/ukraine.png');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Images/ukraine.png');
     aspect-ratio: 1;
     background-size: cover;
     background-repeat: no-repeat;
@@ -339,19 +339,19 @@ a:hover, a:active {
 }
 
 .discIcon {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/discord.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/discord.png");
 }
 
 .gitIcon {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/github.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/github.png");
 }
 
 .contIcon {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/email.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/email.png");
 }
 
 .musicIcon {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/headset-grey.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/headset-grey.png");
 }
 
 .discIcon, .gitIcon, .contIcon, .musicIcon {
@@ -504,7 +504,7 @@ a:hover, a:active {
 }
 
 .previous {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/previous.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/previous.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
@@ -513,7 +513,7 @@ a:hover, a:active {
 }
 
 .playBtn {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/play-btn.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/play-btn.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 35px;
@@ -523,7 +523,7 @@ a:hover, a:active {
 }
 
 .playBtn[data-visible="true"] {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/pause-btn.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/pause-btn.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 35px;
@@ -532,7 +532,7 @@ a:hover, a:active {
 }
 
 .next {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/next.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/next.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
@@ -541,7 +541,7 @@ a:hover, a:active {
 }
 
 .shuffle {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/shuffle.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/shuffle.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
@@ -555,7 +555,7 @@ a:hover, a:active {
 }
 
 .shuffle[aria-enabled="true"] {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/icons/shuffle.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Icons/shuffle.png");
     background-size: cover;
     background-repeat: repeat;
     width: 25px;
@@ -718,7 +718,7 @@ a:hover, a:active {
     aspect-ratio: 1;
     width: 110%;
     position: absolute;
-    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/photos/moonwidget.png');
+    background-image: url('https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Images/moonwidget.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;

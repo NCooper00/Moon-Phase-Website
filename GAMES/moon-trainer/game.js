@@ -56,7 +56,7 @@ gameArea.addEventListener('click', (event) => {
         } else {
             hit = new Audio("https://ncooper00.github.io/Moon-Phase-Website/sound-effects/Game-Sounds/circle-hit.wav");
             hit.muted = false;
-            hit.volume = .15
+            hit.volume = .15;
             hit.play();
             var currentSCORE = scoreInvis;
             currentSCORE++;
@@ -73,7 +73,7 @@ gameArea.addEventListener('click', (event) => {
             if (gameOver.getAttribute('aria-enabled') === "false") {
                 miss = new Audio("https://ncooper00.github.io/Moon-Phase-Website/sound-effects/Game-Sounds/circle-miss.wav");
                 miss.muted = false;
-                miss.volume = .5
+                miss.volume = .5;
                 miss.play();
                 var currentSCORE = scoreInvis;
                 currentSCORE--;

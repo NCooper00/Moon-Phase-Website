@@ -4,7 +4,7 @@ const source = document.querySelectorAll('source');
 
 var audio = document.getElementById('player');
 
-const spacey = "https://ncooper00.github.io/Moon-Phase-Website/music-lib/";
+const spacey = "https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Music-Library/";
 const mp3 = ".mp3";
 
 const allMusic = [
@@ -191,6 +191,7 @@ playBtn.addEventListener('click', () => {
                 setSource(function() {
                     audioElement.setAttribute('src', currentMusic);
                     audioElement.load();
+                    audioElement.volume = .5;
                     audioElement.play();
                     console.log(mixedMusic[currentPos]);
                     songScroll.textContent = mixedMusic[currentPos];  
@@ -220,6 +221,7 @@ playBtn.addEventListener('click', () => {
                 setSource(function() {
                     audioElement.setAttribute('src', currentMusic);
                     audioElement.load();
+                    audioElement.volume = .5;
                     audioElement.play();
                     console.log(allMusic[currentPos]);
                     songScroll.textContent = allMusic[currentPos];  

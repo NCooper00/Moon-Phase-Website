@@ -39,11 +39,11 @@
 }
 
 .leftArrow {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/page-three-images/previous-arrow.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Images/previous-arrow.png");
 }
 
 .rightArrow {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/page-three-images/next-arrow.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Images/next-arrow.png");
 }
 
 .leftArrow:hover, .rightArrow:hover {
@@ -186,7 +186,7 @@
 }
 
 .descArrow {
-    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/page-three-images/desc-arrow.png");
+    background-image: url("https://ncooper00.github.io/Moon-Phase-Website/ASSETS/Images/desc-arrow.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
