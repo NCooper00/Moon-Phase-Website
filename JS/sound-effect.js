@@ -1,4 +1,4 @@
-var navClickSource = "./sound-effects/nav-click.mp3";
+var navClickSource = "./ASSETS/Sound-Effects/nav-click.mp3";
 var navClick;
 
 const navSound = document.querySelectorAll('.headerA');
