@@ -1,3 +1,9 @@
+// const playgame = document.querySelector('.playGame');
+
+// playgame.addEventListener('click', () => {
+//     document.location.href = "/Moon-Phase-Website/GAMES/moon-trainer/game.html"
+// })
+
 var timeLeft = 60;
 
 // const highSCORE = document.querySelector('.highScores');
