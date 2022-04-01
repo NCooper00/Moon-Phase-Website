@@ -5,6 +5,11 @@ console.log(currentDate);
 const apiUrl = "https://api.farmsense.net/v1/moonphases/?d=" + currentDate;
 console.log(apiUrl);
 
+const playGame = document.querySelector('.playGame');
+
+playGame.addEventListener('click', () => {
+    document.location.href = `https://ncooper00.github.io/Moon-Phase-Website/game.html`;
+})
 
 const moonPhaseEl = document.querySelector('.moonStatus')
 
